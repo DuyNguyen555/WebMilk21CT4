@@ -34,35 +34,5 @@
         <li><a class = "fas fa-shopping-cart"></a></li>
     </div>
  </header> 
-<section id="Slider">
-<div class="aspect-ratio-169">
-    <img src="images/slide1.png"> 
-    <img src="images/slide2-.jpg">  
-    <img src="images/slide3.png">
-    <img src="images/slide4.jpg">
-</div>
-<div class="dot-container">
-    <div class="dot active"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-</div>
-</section>
-</body>
-<script>
-const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
-const imgContainer = document.querySelector('.aspect-ratio-169')
-const dotItem = document.querySelectorAll(".aspect-ratio-169 img")
-let imgNumber = imgPosition.length
-let index = 0
-imgPosition.forEach(function(image,index){
-    image.style.left = index*100 + "%"
-})
-function imgSlide (){
-    index++;
-    if(index >= imgNumber){index = 0}
-    imgContainer.style.left = "-" + index*100+ "%"
-}
-setInterval(imgSlide,5000)
-</script>
+ </body>
 </html>

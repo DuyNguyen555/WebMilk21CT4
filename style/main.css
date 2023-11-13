@@ -111,6 +111,7 @@ header {
     background-color: #ccc;
     border-radius: 50%;
     margin-right: 12px;
+    cursor: pointer;
 }
 .dot.active {
     background-color: #333;
