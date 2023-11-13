@@ -6,21 +6,14 @@
 }
 img {
     width:200px;
-<<<<<<< HEAD
     height: 75px;
-=======
-    height:100px;
->>>>>>> 0a0201be61d91adfeb9f60787d16179081eb8dce
 }
 li{
     list-style: none;
 }
 a{
     text-decoration: none;
-<<<<<<< HEAD
     color: black;
-=======
->>>>>>> 0a0201be61d91adfeb9f60787d16179081eb8dce
 }
 header {
     display:flex;
@@ -28,15 +21,11 @@ header {
     padding: 12px 50px;
     height: 70px;
     align-items: center;
-<<<<<<< HEAD
     background-color: skyblue;
-=======
->>>>>>> 0a0201be61d91adfeb9f60787d16179081eb8dce
 }
 .logo{
     flex: 1;
 }
-<<<<<<< HEAD
 .menu{
     flex: 3;
     display: flex;
@@ -68,14 +57,6 @@ header {
 }
 .submenu li a{
     font-weight: normal;
-=======
-.menuon{
-    flex: 3;
-    display: flex;
-}
-.menuon li{
-    padding: 0 12px;
->>>>>>> 0a0201be61d91adfeb9f60787d16179081eb8dce
 }
 .option{
     flex: 1;
@@ -89,7 +70,6 @@ header {
 }
 .option li:first-child input{
     width: 100%;
-<<<<<<< HEAD
     border: none;
     border-bottom: 1px solid #333;
 }
@@ -132,9 +112,3 @@ header {
     background-color: #333;
 }
   
-=======
-}
-.option li:first-child i{
-    position: absolute;
-}
->>>>>>> 0a0201be61d91adfeb9f60787d16179081eb8dce
