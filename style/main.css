@@ -77,6 +77,10 @@ header {
     position: absolute;
     right: 10px;
 }
+#Slider{
+    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+}
 .aspect-ratio-169 {
     display: block;
     position: relative;
