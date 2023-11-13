@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style/login.css">
     <title>Đăng nhập thông tin</title>
 </head>
+
 <body>
     <div class="container">
         <div class="box">
@@ -56,13 +58,13 @@
     </div>
 
     <script type="text/javascript">
-        function changeFormToSignUp(){
+        function changeFormToSignUp() {
             document.getElementById('signInForm').reset();
             document.querySelector('.signIn').style.display = 'none';
             document.querySelector('.signUp').style.display = 'block';
         }
 
-        function changeFormToSignIn(){
+        function changeFormToSignIn() {
             document.getElementById('signUpForm').reset();
             document.getElementById('signInAdminForm').reset();
             document.querySelector('.signUp').style.display = 'none';
@@ -70,7 +72,7 @@
             document.querySelector('.signInAdmin').style.display = 'none';
         }
 
-        function changeFormToSignInAdmin(){
+        function changeFormToSignInAdmin() {
             document.getElementById('signInForm').reset();
             document.querySelector('.signIn').style.display = 'none';
             document.querySelector('.signInAdmin').style.display = 'block';
@@ -79,17 +81,15 @@
         function validateSignUp() {
             var password = document.getElementById('txtPassWordSignUp');
             var confirm = document.getElementById('txtConfirmPassWordSignUp');
-            if(password.value === '' || confirm.value === ''){
+            if (password.value === '' || confirm.value === '') {
                 alert("Vui lòng nhập mật khẩu");
                 return false;
-            }
-            else if(password.value !== confirm.value){
+            } else if (password.value !== confirm.value) {
                 password.value = '';
                 confirm.value = '';
                 alert("Mật khẩu không khớp, vui lòng nhập lại");
                 return false;
-            }
-            else return true;
+            } else return true;
         }
     </script>
 </body>

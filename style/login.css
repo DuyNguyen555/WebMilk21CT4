@@ -19,17 +19,17 @@
     margin-left: 20px;
 }
 
-.content h1{
+.content h1 {
     font-size: 40px;
     text-align: center;
 }
 
-.content form label{
+.content form label {
     font-size: 25px;
     font-weight: bold;
 }
 
-.content form input{
+.content form input {
     width: 80%;
     height: 30px;
     font-size: 18px;
