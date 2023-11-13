@@ -37,7 +37,7 @@ header {
 }
 .menu li:hover .submenu{
     visibility: visible;
-    top: 30px;
+    top: 45px;
 }
 .menu li a{
     font-size: 20px;
@@ -51,7 +51,7 @@ header {
     border: 1px solid #ccc;
     padding: 10px 0 10px 20px;
     visibility: hidden;
-    top: 50px;
+    top: 60px;
     transition: 0.5s;
     background-color: #ccc;
 }
@@ -80,6 +80,7 @@ header {
 #Slider{
     padding-bottom: 30px;
     border-bottom: 2px solid black;
+    overflow: hidden;
 }
 .aspect-ratio-169 {
     display: block;
@@ -116,4 +117,57 @@ header {
 .dot.active {
     background-color: #333;
 }
-  
+/*-----dowload-----*/
+.app-container{
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+.app-google{
+    margin: 50px
+    
+}
+.app-google img{
+    height: 50px;
+    width: 300px;
+}
+.app-container p{
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #333;
+    font-weight: bold;
+}
+/*-----footer-----*/
+.footer-top{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+.footer-top li{
+    padding: 0 12px;
+    position: relative;
+}
+.footer-top li::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #cccccc ;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.footer-top li:last-child::after{
+    display: none;
+}
+.footer-top li:last-child a{
+    margin-right: 12px;
+}
+.footer-center{
+    text-align: center;
+}
