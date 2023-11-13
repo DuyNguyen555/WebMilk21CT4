@@ -1,0 +1,73 @@
+.container {
+    height: 94vh;
+    width: 100%;
+    background-image: url('../images/background/login.jpg');
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+.box {
+    width: 600px;
+    height: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.6)
+}
+
+.content {
+    margin-left: 20px;
+}
+
+.content h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.content form label{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.content form input{
+    width: 80%;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.content form input[type="submit"] {
+    width: 200px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding-left: 0px;
+    cursor: pointer;
+    margin-left: 150px;
+    margin-bottom: 10px;
+}
+
+.content span {
+    font-size: 20px;
+    color: darkblue;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.content span:hover {
+    text-decoration: underline;
+}
+
+.content span:active {
+    color: cornflowerblue;
+}
+
+.signUp {
+    display: none;
+}
+
+.signInAdmin {
+    display: none;
+}
