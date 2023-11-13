@@ -24,6 +24,6 @@
         <li><a class = "fas fa-user"></a></li>
         <li><a class = "fas fa-shopping-cart"></a></li>
     </div>
- </header>   
+ </header>
 </body>
 </html>
