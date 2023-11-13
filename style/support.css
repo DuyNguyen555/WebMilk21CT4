@@ -1,0 +1,54 @@
+.container {
+    height: 94vh;
+    width: 100%;
+    background-image: url('../images/background/bgsp.jpeg');
+    background-size: contain;
+    background-position: center;
+    position: relative;
+}
+
+.box {
+    width: 800px;
+    height: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.9)
+}
+
+.content {
+    padding-top: 20px;
+}
+.content h1{
+    text-align: center;
+}
+
+.introduct {
+    width: 90%;
+    height: 280px;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 10px;
+    line-height: 1.5;
+    margin-top: 30px;
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: rgb(135, 206, 208);
+}
+
+.infoWeb {
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    border: 0px;
+    border-radius: 15px;
+    line-height: 1.5;
+    margin-top: 30px;
+    margin-left: 190px;
+    padding-top: 10px;
+    background-color: rgb(135, 206, 208);
+}
+
+.infoWeb p{
+    font-size: 20px;
+}
