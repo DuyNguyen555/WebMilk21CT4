@@ -26,7 +26,7 @@
                 <li><a href="">sữa thực vật</a></li>
             </ul>          
         </li>
-        <li><a href="">Khuyến mãi</a></li>
+        <li><a href="promotion.php">Khuyến mãi</a></li>
         <li><a href="contact.php">Liên hệ</a></li>
     </div>
     <div class="option">
