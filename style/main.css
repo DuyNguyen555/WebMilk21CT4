@@ -48,6 +48,7 @@ header {
 .submenu{
     position: absolute;
     width: 350px;
+    height: 260px;
     border: 1px solid #ccc;
     padding: 10px 0 10px 20px;
     visibility: hidden;
@@ -55,9 +56,15 @@ header {
     transition: 0.5s;
     background-color: #ccc;
 }
+
+.submenu li{
+    padding: 10px;
+}
+
 .submenu li a{
     font-weight: normal;
 }
+
 .option{
     flex: 1;
     display: flex;
