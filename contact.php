@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/support.css">
-    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/contact.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
             </ul>          
         </li>
         <li><a href="">Khuyến mãi</a></li>
-        <li><a href="">Liên hệ</a></li>
+        <li><a href="contact.php">Liên hệ</a></li>
     </div>
     <div class="option">
         <li><input placeholder="Tìm kiếm" type ="text"><i class = "fas fa-search"></i></li>
@@ -39,7 +39,10 @@
  <div class="box-content">
     <div class="box">
         <div class="contact-content">
-            
+            <h1>Thông tin liên hệ</h1>
+            <li>Email: <span>dtcmilk@milk.vn.com</span></li>
+            <li>Tổng đài hỗ trợ: <span>1800.0000.00</span> (8h-17h)</li>
+            <li>Địa chỉ cửa hàng: <span>ABC XYZ 123</span></li>
         </div>
     </div>
 </div>

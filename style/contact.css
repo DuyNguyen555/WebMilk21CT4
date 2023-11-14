@@ -1,0 +1,31 @@
+.box {
+    height: 500px;
+}
+
+.menu > li:nth-child(5) > a {
+    color: white;
+}
+
+.contact-content {
+    padding-top: 50px;
+}
+
+.contact-content h1{
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.contact-content li{
+    font-size: 20px;
+    margin-left: 250px;
+    margin-bottom: 10px;
+}
+
+.contact-content span {
+    transition: 0.3s;
+}
+
+.contact-content span:hover{
+    color: blue;
+    text-decoration: underline;
+}

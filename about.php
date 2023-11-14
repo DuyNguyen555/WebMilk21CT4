@@ -28,7 +28,7 @@
             </ul>          
         </li>
         <li><a href="">Khuyến mãi</a></li>
-        <li><a href="">Liên hệ</a></li>
+        <li><a href="contact.php">Liên hệ</a></li>
     </div>
     <div class="option">
         <li><input placeholder="Tìm kiếm" type ="text"><i class = "fas fa-search"></i></li>
@@ -38,7 +38,7 @@
  </header>
  <div class="box-content">
     <div class="box">
-        <div class="content">
+        <div class="about-content">
             <h1>Giới thiệu về DTCMilkVN</h1>
             <div class="introduct">
                 DTCMilkVN là thương hiệu mang đến cho khách hàng nhiều nguồn sữa tươi, ngon 

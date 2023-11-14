@@ -2,7 +2,11 @@
     color: white;
 }
 
-.content h1{
+.about-content {
+    padding-top: 20px;
+}
+
+.about-content h1{
     text-align: center;
 }
 
