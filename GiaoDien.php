@@ -36,10 +36,10 @@
  </header> 
 <section id="Slider">
 <div class="aspect-ratio-169">
-    <img src="images/slide1.png"> 
-    <img src="images/slide2-.jpg">  
-    <img src="images/slide3.png">
-    <img src="images/slide4.jpg">
+    <img src="images/background/slide1.png">
+    <img src="images/background/slide2.jpg">
+    <img src="images/background/slide3.png">
+    <img src="images/background/slide4.jpg">
 </div>
 <div class="dot-container">
     <div class="dot active"></div>
