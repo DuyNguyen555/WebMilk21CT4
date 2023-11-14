@@ -48,7 +48,7 @@ header {
 }
 .submenu{
     position: absolute;
-    width: 350px;
+    width: 380px;
     height: 260px;
     border: 1px solid #ccc;
     padding: 10px 0 10px 20px;
@@ -64,11 +64,17 @@ header {
 
 .submenu li a{
     font-weight: normal;
+    transition: font-size 0.5s;
 }
 
 .submenu li a:hover{
     color: rgb(0, 85, 255);
-    font-size: 22px;
+    font-size: 23px;
+}
+
+.submenu li a:active{
+    color: rgb(72, 167, 249);
+    text-decoration: underline;
 }
 
 .option{
