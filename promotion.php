@@ -39,7 +39,8 @@
  <div class="box-content">
     <div class="box">
         <div class="promotion-content">
-            
+            <h1>Thông tin khuyến mãi</h1>
+            <p>Khách hàng có đơn hàng hơn 1 triệu đồng sẽ miễn phí phí vận chuyển</p>
         </div>
     </div>
 </div>
