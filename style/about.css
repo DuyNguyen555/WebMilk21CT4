@@ -1,0 +1,38 @@
+.menu > li:nth-child(2) > a {
+    color: white;
+}
+
+.content h1{
+    text-align: center;
+}
+
+.introduct {
+    width: 90%;
+    height: 280px;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 10px;
+    line-height: 1.5;
+    margin-top: 30px;
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: rgb(135, 206, 208);
+}
+
+.infoWeb {
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    border: 0px;
+    border-radius: 15px;
+    line-height: 1.5;
+    margin-top: 30px;
+    margin-left: 190px;
+    padding-top: 10px;
+    background-color: rgb(135, 206, 208);
+}
+
+.infoWeb p{
+    font-size: 20px;
+}

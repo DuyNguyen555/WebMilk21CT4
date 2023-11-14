@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/support.css">
+    <link rel="stylesheet" href="style/about.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
@@ -14,8 +15,8 @@
         <img src="images/logo1.jpg" alt="logo milk">
     </div>
     <div class="menu">
-        <li><a href="GiaoDien.php">Trang chủ</a></li>
-        <li><a href="GioiThieu.php">Giới thiệu</a></li>
+        <li><a href="index.php">Trang chủ</a></li>
+        <li><a href="about.php">Giới thiệu</a></li>
         <li><a href="">Sản phẩm</a>
             <ul class="submenu">
                 <li><a href="">sữa tươi và sữa dinh dưỡng</a></li>
@@ -35,7 +36,7 @@
         <li><a class = "fas fa-shopping-cart"></a></li>
     </div>
  </header>
- <div class="container">
+ <div class="box-content">
     <div class="box">
         <div class="content">
             <h1>Giới thiệu về DTCMilkVN</h1>

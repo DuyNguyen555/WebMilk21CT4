@@ -76,3 +76,23 @@ header {
     color: rgb(72, 167, 249);
     text-decoration: underline;
 }
+
+.option{
+    flex: 1;
+    display: flex;
+}
+.option li{
+    padding: 0 12px;
+}
+.option li:first-child{
+    position: relative;
+}
+.option li:first-child input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+}
+.option li:first-child i{
+    position: absolute;
+    right: 10px;
+}
