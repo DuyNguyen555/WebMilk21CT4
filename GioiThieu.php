@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/support.css">
-    <title>SALE MILK</title>
+    <title>DTCMilk Việt Nam</title>
 </head>
 <body>
  <header>

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/giaodien.css">
-    <title>SALE MILK</title>
+    <title>DTCMilk Việt Nam</title>
 </head>
 <body>
  <header>
@@ -50,7 +50,7 @@
 </div>
 </section>
 <section class="app-container">
-    <p>Tải ứng dụng DTC MILK</p>
+    <p>Tải ứng dụng DTCMilk</p>
     <div class="app-google">
         <img src="images/dow.webp">
     </div>
