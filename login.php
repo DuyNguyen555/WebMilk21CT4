@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style/login2.css">
+    <link rel="stylesheet" href="style/login.css">
     <title>Đăng nhập thông tin</title>
 </head>
 
