@@ -58,13 +58,13 @@
         </div>
     </section>
     <div class="footer-top">
-        <li><a href="">Liên hệ</a></li>
+        <li><a href="contact.php">Liên hệ</a></li>
         <li><a href="">Tuyển dụng</a></li>
-        <li><a href="">Giới thiệu</a></li>
+        <li><a href="about.php">Giới thiệu</a></li>
         <li>
-            <a href="" class="fab fa-facebook-f"></a>
-            <a href="" class="fab fa-twitter"></a>
-            <a href="" class="fab fa-youtube"></a>
+            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+            <a href="https://twitter.com/" class="fab fa-twitter"></a>
+            <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
         </li>
     </div>
     <div class="footer-center">
