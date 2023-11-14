@@ -1,22 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 img {
-    width:200px;
+    width: 200px;
     height: 75px;
 }
-li{
+
+li {
     list-style: none;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
 }
+
 header {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     padding: 12px 50px;
     height: 70px;
@@ -28,35 +32,39 @@ header {
     z-index: 1;
     background-color: #c8f0f872;
 }
-.logo{
+
+.logo {
     flex: 1;
 }
-.menu{
+
+.menu {
     flex: 3;
     display: flex;
     z-index: 1000;
 }
-.menu li{
+
+.menu li {
     padding: 0 12px;
     position: relative;
 }
-.menu li:hover .submenu{
+
+.menu li:hover .submenu {
     visibility: visible;
     top: 45px;
 }
 
-.menu li a{
+.menu li a {
     font-size: 20px;
-    font-weight: bold !important; 
-    display: block; 
+    font-weight: bold !important;
+    display: block;
     line-height: 20px;
 }
 
-.menu > li > a:hover {
+.menu>li>a:hover {
     color: rgb(71, 71, 199);
 }
 
-.submenu{
+.submenu {
     position: absolute;
     width: 380px;
     height: 260px;
@@ -68,58 +76,64 @@ header {
     background-color: #ddedf4;
 }
 
-.submenu li{
+.submenu li {
     padding: 10px;
 }
 
-.submenu li a{
+.submenu li a {
     font-weight: normal;
     transition: font-size 0.5s;
 }
 
-.submenu li a:hover{
+.submenu li a:hover {
     color: rgb(0, 85, 255);
     font-size: 23px;
 }
 
-.submenu li a:active{
+.submenu li a:active {
     color: rgb(72, 167, 249);
     text-decoration: underline;
 }
 
-.option{
+.option {
     flex: 1;
     display: flex;
 }
-.option li{
+
+.option li {
     padding: 0 12px;
     position: relative;
 }
-.option li::after{
+
+.option li::after {
     content: "";
     display: block;
     width: 1px;
     height: 80%;
-    background: #cccccc ;
+    background: #cccccc;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
-.option li:last-child::after{
+
+.option li:last-child::after {
     display: none;
 }
-.option li:first-child{
+
+.option li:first-child {
     position: relative;
 }
-.option li:first-child input{
+
+.option li:first-child input {
     width: 100%;
     border: none;
     border-bottom: 1px solid #333;
     background: transparent;
     outline: none;
 }
-.option li:first-child i{
+
+.option li:first-child i {
     position: absolute;
     right: 10px;
 }

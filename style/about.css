@@ -1,4 +1,4 @@
-.menu > li:nth-child(2) > a {
+.menu>li:nth-child(2)>a {
     color: rgb(68, 199, 222);
 }
 
@@ -6,7 +6,7 @@
     padding-top: 20px;
 }
 
-.about-content h1{
+.about-content h1 {
     color: skyblue;
     text-align: center;
 }
@@ -38,6 +38,6 @@
     background-color: rgb(135, 206, 208);
 }
 
-.infoWeb p{
+.infoWeb p {
     font-size: 20px;
 }

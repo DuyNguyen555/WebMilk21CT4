@@ -1,4 +1,4 @@
-.menu > li:nth-child(5) > a {
+.menu>li:nth-child(5)>a {
     color: rgb(68, 199, 222);
 }
 
@@ -6,13 +6,13 @@
     padding-top: 50px;
 }
 
-.contact-content h1{
+.contact-content h1 {
     color: skyblue;
     text-align: center;
     padding-bottom: 80px;
 }
 
-.contact-content li{
+.contact-content li {
     font-size: 20px;
     margin-left: 250px;
     margin-bottom: 10px;
@@ -22,7 +22,7 @@
     transition: 0.3s;
 }
 
-.contact-content span:hover{
+.contact-content span:hover {
     color: blue;
     text-decoration: underline;
 }
