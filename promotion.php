@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/support.css">
-    <link rel="stylesheet" href="style/about.css">
+    <link rel="stylesheet" href="style/promotion.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
@@ -38,22 +38,9 @@
  </header>
  <div class="box-content">
     <div class="box">
-        <div class="about-content">
-            <h1>Giới thiệu về DTCMilkVN</h1>
-            <div class="introduct">
-                DTCMilkVN là thương hiệu mang đến cho khách hàng nhiều nguồn sữa tươi, ngon 
-                và đảm bảo an toàn vệ sinh theo quy định an toàn thực phẩm quốc tế.
-                <br><br>
-                DTCMilkVN có đa dạng các loại sữa có thể đáp ứng từng đối tượng khác nhau. Cũng là 
-                nơi uy tín khách hàng tìm đến.
-                <br><br>
-                Sự hài lòng của khách hàng chính là động lực giúp DTCMilkVN không ngừng hoàn thiện, 
-                mang lại giá trị tốt nhất cho khách hàng.  
-            </div>
-            <div class="infoWeb">
-                <h2>Website DTCMilkVN</h2>
-                <p>www.dtcmilkvn.com</p>
-            </div>
+        <div class="promotion-content">
+            <h1>Thông tin khuyến mãi</h1>
+            <p>Khách hàng có đơn hàng hơn 1 triệu đồng sẽ miễn phí phí vận chuyển</p>
         </div>
     </div>
 </div>

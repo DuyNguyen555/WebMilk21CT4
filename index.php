@@ -26,8 +26,8 @@
                 <li><a href="">sữa thực vật</a></li>
             </ul>          
         </li>
-        <li><a href="">Khuyến mãi</a></li>
-        <li><a href="">Liên hệ</a></li>
+        <li><a href="promotion.php">Khuyến mãi</a></li>
+        <li><a href="contact.php">Liên hệ</a></li>
     </div>
     <div class="option">
         <li><input placeholder="Tìm kiếm" type ="text"><i class = "fas fa-search"></i></li>

@@ -2,7 +2,12 @@
     color: white;
 }
 
-.content h1{
+.about-content {
+    padding-top: 20px;
+}
+
+.about-content h1{
+    color: skyblue;
     text-align: center;
 }
 

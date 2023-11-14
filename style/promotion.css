@@ -1,0 +1,22 @@
+.box {
+    height: 500px;
+}
+
+.menu > li:nth-child(4) > a {
+    color: white;
+}
+
+.promotion-content {
+    padding-top: 50px;
+}
+
+.promotion-content h1 {
+    color: skyblue;
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.promotion-content p {
+    font-size: 22px;
+    text-align: center;
+}
