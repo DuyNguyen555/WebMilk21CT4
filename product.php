@@ -12,6 +12,13 @@
 </head>
 
 <body>
+    <?php 
+        require_once("sql/connect.php");
+        $sql =  "SELECT * FROM sua INNER JOIN hang 
+        ON sua.maHang = hang.maHang
+        order by giaTien asc";
+        $result = mysqli_query($connect, $sql);
+    ?>
     <header>
         <div class="logo">
             <img src="images/logo1.jpg" alt="logo milk">
@@ -88,6 +95,20 @@
                         </div>
                     </div>
                 </div>
+                <?php 
+                    while($row = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="product-info">
+                    <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
+                    <p><?php echo $row["tenSua"]; ?></p>
+                    <p><?php echo $row["tenHang"]; ?></p>
+                    <p><?php echo $row["loaiSua"];?></p>
+                    <p><?php echo $row["giaTien"];?></p>
+                </div>
+                <?php
+                    }
+                    mysqli_close($connect);
+                ?>
             </div>
         </div>
     </section>
