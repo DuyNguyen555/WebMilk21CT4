@@ -61,37 +61,6 @@
                     </div>
                     <div class="cart-content row">
                         <div class="cart-content-items">
-                            <!--<img src="images/product/suachua1.webp" alt="hinh">
-                            <h1>Sữa chua TH true MILK nha đam</h1>
-                            <p>gia<sup>đ</sup></p>
-
-                            <img src="images/product/suachua2.webp" alt="hinh">
-                            <h1>Sữa chua Vinamilk nha đam</h1>
-                            <p>gia<sup>đ</sup></p>
-
-                            <img src="images/product/suadac1.webp" alt="hinh">
-                            <h1>Sữa đặc Dutch Lady cao cấp</h1>
-                            <p>gia<sup>đ</sup></p>
-
-                            <img src="images/product/suadac2.webp" alt="hinh">
-                            <h1>Sữa đặc Ông Thọ</h1>
-                            <p>gia<sup>đ</sup></p>
-
-                            <img src="images/product/suadac3.webp" alt="hinh">
-                            <h1>Sữa đặc</h1>
-                            <p>gia<sup>đ</sup></p>
-
-                            <img src="images/product/suatuoi1.webp" alt="hinh">
-                            <h1>loai sua</h1>
-                            <p>gia<sup>đ</sup></p>
-
-                            <img src="images/product/suatuoi2.webp" alt="hinh">
-                            <h1>loai sua</h1>
-                            <p>gia<sup>đ</sup></p>
-
-                            <img src="images/product/suatuoi3.webp" alt="hinh">
-                            <h1>loai sua</h1>
-                            <p>gia<sup>đ</sup></p>-->
                         </div>
                     </div>
                 </div>
