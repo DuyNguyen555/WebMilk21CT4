@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/product.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 
@@ -38,39 +39,55 @@
         </div>
     </header>
     <section class="cartegory">
-        <div class="cart-content">
-            <div class="cart-content-items">
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+        <div class="container">
+            <div class="row">
+                <div class="cart-center row">
+                    <div class="cart-top-items">
+                        <p>Sản phẩm</p>
+                    </div>
+                    <div class="cart-top-items">
+                        <select name="" id="">
+                            <option value="">Sắp xếp</option>
+                            <option value="">Giá từ thấp đến cao</option>
+                            <option value="">Giá từ cao đến thấp</option>
+                        </select>
+                    </div>
+                    <div class="cart-content row">
+                        <div class="cart-content-items">
+                            <!--<img src="images/product/suachua1.webp" alt="hinh">
+                            <h1>Sữa chua TH true MILK nha đam</h1>
+                            <p>gia<sup>đ</sup></p>
 
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+                            <img src="images/product/suachua2.webp" alt="hinh">
+                            <h1>Sữa chua Vinamilk nha đam</h1>
+                            <p>gia<sup>đ</sup></p>
 
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+                            <img src="images/product/suadac1.webp" alt="hinh">
+                            <h1>Sữa đặc Dutch Lady cao cấp</h1>
+                            <p>gia<sup>đ</sup></p>
 
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+                            <img src="images/product/suadac2.webp" alt="hinh">
+                            <h1>Sữa đặc Ông Thọ</h1>
+                            <p>gia<sup>đ</sup></p>
 
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+                            <img src="images/product/suadac3.webp" alt="hinh">
+                            <h1>Sữa đặc</h1>
+                            <p>gia<sup>đ</sup></p>
 
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+                            <img src="images/product/suatuoi1.webp" alt="hinh">
+                            <h1>loai sua</h1>
+                            <p>gia<sup>đ</sup></p>
 
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+                            <img src="images/product/suatuoi2.webp" alt="hinh">
+                            <h1>loai sua</h1>
+                            <p>gia<sup>đ</sup></p>
 
-                <img src="" alt="hinh">
-                <h1>loai sua</h1>
-                <p>gia<sup>đ</sup></p>
+                            <img src="images/product/suatuoi3.webp" alt="hinh">
+                            <h1>loai sua</h1>
+                            <p>gia<sup>đ</sup></p>-->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
