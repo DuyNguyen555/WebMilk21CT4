@@ -36,7 +36,18 @@
             </div>
         </header>
         <div class="box">
-            <section>
+            <section class="header-cart">
+                <h1>Giỏ hàng của bạn</h1>
+            </section>
+            <section class="infor-cart">
+                <table>
+                    <tr>
+                        <th>Thông tin sản phẩm</th>
+                        <th>Đơn giá</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                    </tr>
+                </table>
             </section>
         </div>
     </body>
