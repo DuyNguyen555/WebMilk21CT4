@@ -34,8 +34,8 @@
         </div>
         <div class="option">
             <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
-            <li><a class="fas fa-user"></a></li>
-            <li><a class="fas fa-shopping-cart"></a></li>
+            <li><a href="login.php" class="fas fa-user"></a></li>
+            <li><a href="" class="fas fa-shopping-cart"></a></li>
         </div>
     </header>
     <div class="box-content">
