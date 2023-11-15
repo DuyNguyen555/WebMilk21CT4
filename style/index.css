@@ -72,6 +72,10 @@
 }
 
 /*-----footer-----*/
+.footer{
+    padding: 100px 0 0;
+    border-top: 2px solid black;
+}
 .footer-top {
     display: flex;
     text-align: center;

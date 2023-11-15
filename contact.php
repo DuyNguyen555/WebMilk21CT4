@@ -19,7 +19,7 @@
         <div class="menu">
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="about.php">Giới thiệu</a></li>
-            <li><a href="">Sản phẩm</a>
+            <li><a href="product.php">Sản phẩm</a>
                 <ul class="submenu">
                     <li><a href="">sữa tươi và sữa dinh dưỡng</a></li>
                     <li><a href="">sữa cho mẹ bầu và bé</a></li>

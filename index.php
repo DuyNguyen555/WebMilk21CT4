@@ -18,7 +18,7 @@
         <div class="menu">
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="about.php">Giới thiệu</a></li>
-            <li><a href="">Sản phẩm</a>
+            <li><a href="product.php">Sản phẩm</a>
                 <ul class="submenu">
                     <li><a href="">sữa tươi và sữa dinh dưỡng</a></li>
                     <li><a href="">sữa cho mẹ bầu và bé</a></li>
@@ -51,28 +51,30 @@
             <div class="dot"></div>
         </div>
     </section>
-    <section class="app-container">
-        <p>Tải ứng dụng DTCMilk</p>
-        <div class="app-google">
-            <img src="images/dow.webp">
+    <section class="footer">
+        <section class="app-container">
+            <p>Tải ứng dụng DTCMilk</p>
+            <div class="app-google">
+                <img src="images/dow.webp">
+            </div>
+        </section>
+        <div class="footer-top">
+            <li><a href="contact.php">Liên hệ</a></li>
+            <li><a href="">Tuyển dụng</a></li>
+            <li><a href="about.php">Giới thiệu</a></li>
+            <li>
+                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                <a href="https://twitter.com/" class="fab fa-twitter"></a>
+                <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+            </li>
+        </div>
+        <div class="footer-center">
+            <p>Công ty Cổ phần Họa Mi với số đăng ký kinh doanh: 0123456789 <br>
+                Địa chỉ đăng ký: Tổ dân phố 80, P.Hòa Minh, Q.Liên Chiểu, TP.Đà Nẵng, Việt Nam - 0908 080 808<br>
+                Đặt hàng online: <b>0952 648 931.</b>
+            </p>
         </div>
     </section>
-    <div class="footer-top">
-        <li><a href="contact.php">Liên hệ</a></li>
-        <li><a href="">Tuyển dụng</a></li>
-        <li><a href="about.php">Giới thiệu</a></li>
-        <li>
-            <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
-            <a href="https://twitter.com/" class="fab fa-twitter"></a>
-            <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
-        </li>
-    </div>
-    <div class="footer-center">
-        <p>Công ty Cổ phần Họa Mi với số đăng ký kinh doanh: 0123456789 <br>
-            Địa chỉ đăng ký: Tổ dân phố 80, P.Hòa Minh, Q.Liên Chiểu, TP.Đà Nẵng, Việt Nam - 0908 080 808<br>
-            Đặt hàng online: <b>0952 648 931.</b>
-        </p>
-    </div>
     <script>
         const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
         const imgContainer = document.querySelector('.aspect-ratio-169')
@@ -102,5 +104,5 @@
         }
         setInterval(imgSlide, 5000)
     </script>
-
+</body>
 </html>
