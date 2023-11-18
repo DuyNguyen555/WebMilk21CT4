@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 15, 2023 lúc 10:27 AM
+-- Thời gian đã tạo: Th10 18, 2023 lúc 05:06 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -109,8 +109,14 @@ CREATE TABLE `sua` (
 --
 
 INSERT INTO `sua` (`maSua`, `tenSua`, `loaiSua`, `giaTien`, `maHang`) VALUES
+('dl1', 'Sữa tươi Dutch Lady hộp', 'sữa tươi', 2800, 'DL'),
+('dl3', 'Sữa đặc Dutch Lady Cao Cấp', 'sữa đặc', 20000, 'DL'),
+('th1', 'Sữa tươi TH true MILK hộp', 'sữa tươi', 32000, 'TH'),
+('th2', 'Sữa chua TH true MILK', 'sữa chua', 32000, 'TH'),
 ('vnm1', 'Sữa tươi Vinamilk hộp', 'sữa tươi', 28000, 'VNM'),
-('vnm2', 'Sữa chua Vinamilk', 'sữa chua', 28000, 'VNM');
+('vnm2', 'Sữa chua Vinamilk', 'sữa chua', 28000, 'VNM'),
+('vnm31', 'Sữa đặc Ông Thọ', 'sữa đặc', 24000, 'VNM'),
+('vnm32', 'Sữa đặc Ngôi sao Phương Nam', 'sữa đặc', 24000, 'VNM');
 
 --
 -- Chỉ mục cho các bảng đã đổ
