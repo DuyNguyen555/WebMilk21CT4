@@ -42,7 +42,7 @@
         <div class="option">
             <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
             <li><a href="login.php" class="fas fa-user"></a></li>
-            <li><a href="" class="fas fa-shopping-cart"></a></li>
+            <li><a href="cart.php" class="fas fa-shopping-cart"></a></li>
         </div>
     </header>
     <section class="cartegory">
@@ -70,9 +70,12 @@
                 <div class="product-info">
                     <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
                     <p><?php echo $row["tenSua"]; ?></p>
-                    <p><?php echo $row["tenHang"]; ?></p>
+                    <p><?php echo $row["tenHang"];?></p>
                     <p><?php echo $row["loaiSua"];?></p>
                     <p><?php echo $row["giaTien"];?></p>
+                    <div class="bttn">
+                        <button type="button" class="" onclick=""><a href="cart.php">Thêm sản phẩm vào giỏ hàng</a></button>
+                    </div>
                 </div>
                 <?php
                     }
