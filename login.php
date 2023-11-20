@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/login2.css">
     <title>Đăng nhập thông tin</title>
 </head>
 
@@ -26,10 +26,12 @@
                 <!-- Đăng ký tài khoản cho khách hàng -->
                 <div class="signUp">
                     <h1>Đăng ký</h1>
-                    <form id="signUpForm" action="" onsubmit="return validateSignUp()">
+                    <form id="signUpForm" action="" onsubmit="return validateSignUp()" method="post">
                         <label for="">Tài khoản email</label><br>
                         <input type="text" name="" id=""><br>
                         <label for="">Họ và tên</label><br>
+                        <input type="text" name="" id=""><br>
+                        <label for="">Số điện thoại</label><br>
                         <input type="text" name="" id=""><br>
                         <label for="">Địa chỉ</label><br>
                         <input type="text" name="" id=""><br>
