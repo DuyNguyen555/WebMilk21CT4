@@ -15,7 +15,7 @@
 			$email = $_POST["email"];
 			$cell = $_POST["cell"];
 			$address = $_POST["address"];
-			$pass = $_POST["pass"];
+			$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
 
 			require_once("./sql/connect.php");
 			$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
