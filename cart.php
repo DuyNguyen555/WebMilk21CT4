@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main2.css">
-    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="style/cart2.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
@@ -39,49 +39,58 @@
         <section class="header-cart">
             <h1>Giỏ hàng của bạn</h1>
         </section>
-        <section class="infor-cart">
-            <table>
-                <tr>    
-                    <th>Sản phẩm</th>
-                    <th>Tên sản phẩm</th>
-                    <th>Số lượng</th>
-                    <th>Thành tiền</th>
-                    <th>Xóa</th>
-                </tr>
-                <tr>
-                    <td><img src="images/product/vnm1.webp" alt="Hình sữa"></td>
-                    <td><p>Sữa tươi Vinamilk hộp</p></td>
-                    <td><input type="number" value="1" min="1"></td>
-                    <td><p>28000Đ</p></td>
-                    <td><button>X</button></td>
-                </tr>
-            </table>
-        </section>
-        <section class="pay-cart">
-            <table>
-                <tr>
-                    <th colspan="2">Tổng tiền giỏ hàng</th>
-                </tr>
-                <tr>
-                    <td>Tổng sản phẩm</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Tổng tiền hàng</td>
-                    <td><p>56000Đ</p></td>
-                </tr>
-                <tr>
-                    <td>Tổng thanh toán</td>
-                    <td><p style="color: black; font-weight: bold;">56000Đ</p></td>
-                </tr>
-            </table>
-            <div>
-                <div class="pay-cart-button">
-                    <button>Tiếp tục mua</button>
-                    <button>Thanh toán</button>
+        <div class="content">
+            <section class="infor-cart">
+                <table>
+                    <tr>    
+                        <th>Sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Thành tiền</th>
+                        <th>Xóa</th>
+                    </tr>
+                    <tr>
+                        <td><img src="images/product/vnm1.webp" alt="Hình sữa"></td>
+                        <td><p>Sữa tươi Vinamilk hộp</p></td>
+                        <td><input type="number" value="1" min="1"></td>
+                        <td><p>28000Đ</p></td>
+                        <td><button>X</button></td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/product/vnm2.webp" alt="Hình sữa"></td>
+                        <td><p>Sữa tươi Vinamilk hộp</p></td>
+                        <td><input type="number" value="1" min="1"></td>
+                        <td><p>28000Đ</p></td>
+                        <td><button>X</button></td>
+                    </tr>
+                </table>
+            </section>
+            <section class="pay-cart">
+                <table>
+                    <tr>
+                        <th colspan="2">Tổng tiền giỏ hàng</th>
+                    </tr>
+                    <tr>
+                        <td>Tổng sản phẩm</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Tổng tiền hàng</td>
+                        <td><p>56000Đ</p></td>
+                    </tr>
+                    <tr>
+                        <td>Tổng thanh toán</td>
+                        <td><p style="color: black; font-weight: bold;">56000Đ</p></td>
+                    </tr>
+                </table>
+                <div>
+                    <div class="pay-cart-button">
+                        <button>Tiếp tục mua</button>
+                        <button>Thanh toán</button>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 </body>
 </html>
