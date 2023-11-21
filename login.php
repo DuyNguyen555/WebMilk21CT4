@@ -9,7 +9,7 @@
 </head>
 
 <body>
-	<?php 
+	<?php
 		if(isset($_POST["btnSub"])){
 			$name = $_POST["name"];
 			$email = $_POST["email"];
@@ -17,27 +17,43 @@
 			$address = $_POST["address"];
 			$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
 
+
 			require_once("./sql/connect.php");
-			
+
 			$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
 					VALUES ('$name', $cell, '$address', '$email', '$pass')";
 
 			$result = mysqli_query($connect, $sql);
-            if($result){
-                mysqli_close($connect);
-				echo "Swal.fire({
-					icon: 'success',
-					title: 'Đăng ký thành công',
-					showConfirmButton: false,
-					timer: 1500
-				  });";
-                header("location:login.php");
-            }
-            else{
-                echo "Update thất bại " . mysqli_error($conn);
-            }
+
+			if($result){
+				mysqli_close($connect);
+	?>
+				<script type="text/javascript">
+					Swal.fire({
+						icon: 'success',
+						title: 'Đăng ký thành công',
+						showConfirmButton: false,
+						timer: 1500
+					});
+				</script>
+	<?php
+			}
+			else {
+				mysqli_error($connect);
+	?>
+				<script type="text/javascript">
+					Swal.fire({
+						icon: 'error',
+						title: 'Đăng ký thất bại',
+						showConfirmButton: false,
+						timer: 1500
+					});
+				</script>
+	<?php
+			}
 		}
 	?>
+
 	<div class="box-form">
 		<div class="left">
 			<div class="overlay">
@@ -48,9 +64,9 @@
 
 			<!-- Đăng nhập -->
 			<section class="sign-in">
-				<h5>Đăng nhập</h5>
-				<p>Chưa có tài khoản: <a href="#" onclick="changeSignUp()">Tạo tài khoản</a></p>
 				<form action="" onsubmit="return validateSignIn(event)">
+					<h5>Đăng nhập</h5>
+					<p>Chưa có tài khoản: <a href="#" onclick="changeSignUp()">Tạo tài khoản</a></p>
 					<input type="text" id="txtEmailSignIn" placeholder="Email"><br>
 					<input type="password" id="txtPassSignIn" placeholder="Mật khẩu">
 					<br>
@@ -60,9 +76,9 @@
 
 			<!-- Đăng ký -->
 			<section class="sign-up">
-				<h5>Đăng ký</h5>
-				<p>Đã có tài khoản: <a href="#" onclick="changeSignIn()">Đăng nhập</a></p>
-				<form action="" method="post">
+				<form action="" method="post" onsubmit="return validateSignUp()" >
+					<h5>Đăng ký</h5>
+					<p>Đã có tài khoản: <a href="#" onclick="changeSignIn()">Đăng nhập</a></p>
 					<input type="text" name="name" id="txtNameSignUP" placeholder="Họ và tên">
 					<input type="text" name="email" id="txtEmailSignUP" placeholder="Email"><br>
 					<input type="text" name="cell" id="txtCellSignUP" placeholder="Số điện thoại">
@@ -87,7 +103,7 @@
 			document.querySelector(".sign-up").style.display = "none";
 		}
 
-		function validateSignIn(event){
+		function validateSignIn(){
 			event.preventDefault();
 			if(document.getElementById("txtEmailSignIn").value === ""){
 				Swal.fire({
@@ -105,75 +121,62 @@
 			}
 		}
 
-		// function validateSignUp(event){
-		// 	event.preventDefault();
-		// 	var pass = document.getElementById("txtPassSignUp").value
-		// 	var repass = document.getElementById("txtPassSignUp2").value
-		// 	if(document.getElementById("txtNameSignUP").value === ""){
-		// 		Swal.fire({
-		// 			icon: "warning",
-		// 			title: "Thông tin đăng ký trống",
-		// 			text: "Quý khách vui lòng nhập họ và tên để đăng ký",
-		// 		});
-		// 	}
-		// 	else if(document.getElementById("txtEmailSignUP").value === ""){
-		// 		Swal.fire({
-		// 			icon: "warning",
-		// 			title: "Thông tin đăng ký trống",
-		// 			text: "Quý khách vui lòng nhập email để đăng ký",
-		// 		});
-		// 	}
-		// 	else if(document.getElementById("txtCellSignUP").value === ""){
-		// 		Swal.fire({
-		// 			icon: "warning",
-		// 			title: "Thông tin đăng ký trống",
-		// 			text: "Quý khách vui lòng nhập số điện thoại để đăng ký",
-		// 		});
-		// 	}
-		// 	else if(document.getElementById("txtAddressSignUP").value === ""){
-		// 		Swal.fire({
-		// 			icon: "warning",
-		// 			title: "Thông tin đăng ký trống",
-		// 			text: "Quý khách vui lòng nhập số điện thoại để đăng ký",
-		// 		});
-		// 	}
-		// 	else if(pass === ""){
-		// 		Swal.fire({
-		// 			icon: "warning",
-		// 			title: "Thông tin đăng ký trống",
-		// 			text: "Quý khách vui lòng nhập mật khẩu để đăng ký",
-		// 		});
-		// 	}
-		// 	else if(repass === ""){
-		// 		Swal.fire({
-		// 			icon: "warning",
-		// 			title: "Thông tin đăng ký trống",
-		// 			text: "Quý khách vui lòng nhập lại mật khẩu để đăng ký",
-		// 		});
-		// 	}
-		// 	else if(pass !== repass){
-		// 		Swal.fire({
-		// 			icon: "error",
-		// 			title: "Thông tin đăng ký sai",
-		// 			text: "Mật khẩu không khớp",
-		// 		});
-		// 	}
-		// 	else {
-		// 		let timerInterval;
-		// 		Swal.fire({
-		// 			title: "Hệ thống đang xử lý",
-		// 			html: "Quý khách đợi trong giây lát",
-		// 			timer: 2000,
-		// 			timerProgressBar: true,
-		// 			didOpen: () => {
-		// 				Swal.showLoading()
-		// 			},
-		// 		willClose: () => {
-		// 			clearInterval(timerInterval);
-		// 		}
-		// 		})
-		// 	}
-		// }
+		// Hàm kiểm tra thanh đăng ký
+		function validateSignUp() {
+            var pass = document.getElementById("txtPassSignUp").value
+            var repass = document.getElementById("txtPassSignUp2").value
+            if (document.getElementById("txtNameSignUP").value === "") {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Thông tin đăng ký trống",
+                    text: "Quý khách vui lòng nhập họ và tên để đăng ký",
+                });
+                return false;
+            }
+			else if (document.getElementById("txtEmailSignUP").value === "") {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Thông tin đăng ký trống",
+                    text: "Quý khách vui lòng nhập email để đăng ký",
+                });
+                return false;
+            }
+			else if (document.getElementById("txtCellSignUP").value === "") {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Thông tin đăng ký trống",
+                    text: "Quý khách vui lòng nhập số điện thoại để đăng ký",
+                });
+                return false;
+            }
+			else if (document.getElementById("txtAddressSignUP").value === "") {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Thông tin đăng ký trống",
+                    text: "Quý khách vui lòng nhập địa chỉ để đăng ký",
+                });
+                return false;
+            }
+			else if (pass === "") {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Thông tin đăng ký trống",
+                    text: "Quý khách vui lòng nhập mật khẩu để đăng ký",
+                });
+                return false;
+            }
+			else if (pass !== repass) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Mật khẩu không khớp với nhau",
+                    text: "Quý khách vui lòng nhập lại mật khẩu",
+                });
+                return false;
+            }
+
+            // Nếu không có lỗi, thực hiện submit
+            return true;
+        }
 	</script>
 </body>
 
