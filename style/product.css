@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(white, rgb(0, 213, 255), blue, white 90%);
+}
+
 .menu>li:nth-child(3)>a{
     color: rgb(68, 199, 222);
 }
