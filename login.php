@@ -9,50 +9,52 @@
 </head>
 
 <body>
-	<?php
-		if(isset($_POST["btnSub"])){
-			$name = $_POST["name"];
-			$email = $_POST["email"];
-			$cell = $_POST["cell"];
-			$address = $_POST["address"];
-			$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
+<?php
+	if(isset($_POST["btnSub"])){
+		$name = $_POST["name"];
+		$email = $_POST["email"];
+		$cell = $_POST["cell"];
+		$address = $_POST["address"];
+		$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
 
 
-			require_once("./sql/connect.php");
+		require_once("./sql/connect.php");
 
-			$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
-					VALUES ('$name', $cell, '$address', '$email', '$pass')";
+		$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
+				VALUES ('$name', $cell, '$address', '$email', '$pass')";
 
-			$result = mysqli_query($connect, $sql);
+		$result = mysqli_query($connect, $sql);
 
-			if($result){
-				mysqli_close($connect);
-	?>
-				<script type="text/javascript">
-					Swal.fire({
-						icon: 'success',
-						title: 'Đăng ký thành công',
-						showConfirmButton: false,
-						timer: 1500
-					});
-				</script>
-	<?php
-			}
-			else {
-				mysqli_error($connect);
-	?>
-				<script type="text/javascript">
-					Swal.fire({
-						icon: 'error',
-						title: 'Đăng ký thất bại',
-						showConfirmButton: false,
-						timer: 1500
-					});
-				</script>
-	<?php
-			}
+		if($result){
+			mysqli_close($connect);
+?>
+			<script type="text/javascript">
+				Swal.fire({
+					icon: 'success',
+					title: 'Đăng ký thành công',
+					showConfirmButton: false,
+					timer: 1500
+				});
+			</script>
+<?php
 		}
-	?>
+		else {
+			mysqli_error($connect);
+?>
+			<script type="text/javascript">
+				Swal.fire({
+					icon: 'error',
+					title: 'Đăng ký thất bại',
+					showConfirmButton: false,
+					timer: 1500
+				});
+			</script>
+<?php
+		}
+	}
+
+	
+?>
 
 	<div class="box-form">
 		<div class="left">
@@ -64,7 +66,7 @@
 
 			<!-- Đăng nhập -->
 			<section class="sign-in">
-				<form action="" onsubmit="return validateSignIn(event)">
+				<form action="" method="post" onsubmit="return validateSignIn()">
 					<h5>Đăng nhập</h5>
 					<p>Chưa có tài khoản: <a href="#" onclick="changeSignUp()">Tạo tài khoản</a></p>
 					<input type="text" id="txtEmailSignIn" placeholder="Email"><br>
@@ -76,7 +78,7 @@
 
 			<!-- Đăng ký -->
 			<section class="sign-up">
-				<form action="" method="post" onsubmit="return validateSignUp()" >
+				<form action="" method="post" onsubmit="return validateSignUp()">
 					<h5>Đăng ký</h5>
 					<p>Đã có tài khoản: <a href="#" onclick="changeSignIn()">Đăng nhập</a></p>
 					<input type="text" name="name" id="txtNameSignUP" placeholder="Họ và tên">
@@ -104,13 +106,13 @@
 		}
 
 		function validateSignIn(){
-			event.preventDefault();
 			if(document.getElementById("txtEmailSignIn").value === ""){
 				Swal.fire({
 					icon: "warning",
 					title: "Thông tin đăng nhập trống",
 					text: "Quý khách vui lòng nhập email để đăng nhập",
 				});
+				return false;
 			}
 			else if(document.getElementById("txtPassSignIn").value === ""){
 				Swal.fire({
@@ -118,7 +120,10 @@
 					title: "Thông tin đăng nhập trống",
 					text: "Quý khách vui lòng nhập mật khẩu để đăng nhập",
 				});
+				return false;
 			}
+
+			return true;
 		}
 
 		// Hàm kiểm tra thanh đăng ký
@@ -174,7 +179,6 @@
                 return false;
             }
 
-            // Nếu không có lỗi, thực hiện submit
             return true;
         }
 	</script>
