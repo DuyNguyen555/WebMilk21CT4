@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 20, 2023 lúc 03:31 PM
+-- Thời gian đã tạo: Th10 21, 2023 lúc 09:02 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -109,14 +109,38 @@ CREATE TABLE `sua` (
 --
 
 INSERT INTO `sua` (`maSua`, `tenSua`, `loaiSua`, `giaTien`, `maHang`) VALUES
-('dl1', 'Sữa tươi Dutch Lady hộp', 'sữa tươi', 28000, 'DL'),
+('dl1', 'Sữa tươi Dutch Lady hộp có đường', 'sữa tươi', 28000, 'DL'),
 ('dl3', 'Sữa đặc Dutch Lady Cao Cấp', 'sữa đặc', 20000, 'DL'),
-('th1', 'Sữa tươi TH true MILK hộp', 'sữa tươi', 32000, 'TH'),
-('th2', 'Sữa chua TH true MILK', 'sữa chua', 32000, 'TH'),
-('vnm1', 'Sữa tươi Vinamilk hộp', 'sữa tươi', 28000, 'VNM'),
-('vnm2', 'Sữa chua Vinamilk', 'sữa chua', 28000, 'VNM'),
+('dl31', 'Sữa đặc Dutch Lady có đường', 'sữa đặc', 20000, 'DL'),
+('ntf11', 'Sữa đậu nành Nutifood', 'sữa thực vật', 35000, 'NTF'),
+('th1', 'Sữa tươi TH true MILK hộp ít đường', 'sữa tươi', 32000, 'TH'),
+('th12', 'Sữa tươi TH true MILK hộp vị dâu', 'sữa tươi', 30000, 'TH'),
+('th13', 'Sữa tươi TH true MILK hộp vị socola', 'sữa tươi', 30000, 'TH'),
+('th2', 'Sữa chua TH true MILK nha đam', 'sữa chua', 32000, 'TH'),
+('th21', 'Sữa chua TH true MILK vị táo', 'sữa chua', 32000, 'TH'),
+('th22', 'Sữa chua TH true MILK vị việt quất', 'sữa chua', 32000, 'TH'),
+('th23', 'Sữa chua TH true MILK ít đường', 'sữa chua', 32000, 'TH'),
+('th41', 'Sữa óc chó TH true MILK', 'sữa thực vật', 28000, 'TH'),
+('vnm1', 'Sữa tươi Vinamilk hộp không đường', 'sữa tươi', 28000, 'VNM'),
+('vnm12', 'Sữa tươi Vinamilk hộp vị dâu', 'sữa tươi', 28000, 'VNM'),
+('vnm13', 'Sữa tươi Vinamilk hộp vị socola', 'sữa tươi', 28000, 'VNM'),
+('vnm14', 'Sữa tươi Vinamilk hộp ít đường', 'sữa tươi', 28000, 'VNM'),
+('vnm15', 'Sữa tươi Vinamilk hộp có đường', 'sữa tươi', 28000, 'VNM'),
+('vnm2', 'Sữa chua Vinamilk nha đam', 'sữa chua', 28000, 'VNM'),
+('vnm21', 'Sữa chua Vinamilk vị dâu', 'sữa chua', 32000, 'VNM'),
+('vnm22', 'Sữa chua Vinamilk ít đường', 'sữa chua', 32000, 'VNM'),
+('vnm23', 'Sữa chua Vinamilk không đường', 'sữa chua', 32000, 'VNM'),
 ('vnm31', 'Sữa đặc Ông Thọ', 'sữa đặc', 24000, 'VNM'),
-('vnm32', 'Sữa đặc Ngôi sao Phương Nam', 'sữa đặc', 24000, 'VNM');
+('vnm32', 'Sữa đặc Ngôi sao Phương Nam', 'sữa đặc', 24000, 'VNM'),
+('vnm33', 'Sữa đặc Ngôi sao Phương Nam lon', 'sữa đặc', 22000, 'VNM'),
+('vnm34', 'Sữa đặc Ông Thọ đỏ', 'sữa đặc', 25000, 'VNM'),
+('vnm35', 'Sữa đặc Ông Thọ xanh', 'sữa đặc', 25000, 'VNM'),
+('vnm41', 'Sữa đậu đỏ Vinamilk', 'sữa thực vật', 25000, 'VNM'),
+('vnm42', 'Sữa hạnh nhân Vinamilk', 'sữa thực vật', 25000, 'VNM'),
+('vnm43', 'Sữa đậu nành Vinamilk', 'sữa thực vật', 25000, 'VNM'),
+('vs11', 'Sữa Fami vị dừa', 'sữa thực vật', 36000, 'VS'),
+('vs12', 'Sữa Fami ít đường', 'sữa thực vật', 36000, 'VS'),
+('vs13', 'Sữa Fami vị cà ', 'sữa thực vật', 36000, 'VS');
 
 --
 -- Chỉ mục cho các bảng đã đổ

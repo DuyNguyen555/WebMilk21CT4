@@ -19,8 +19,6 @@
             <li><a href="product.php">Sản phẩm</a>
                 <ul class="submenu">
                     <li><a href="">sữa tươi và sữa dinh dưỡng</a></li>
-                    <li><a href="">sữa cho mẹ bầu và bé</a></li>
-                    <li><a href="">sữa cho người cao tuổi</a></li>
                     <li><a href="">sữa chua</a></li>
                     <li><a href="">sữa đặc</a></li>
                     <li><a href="">sữa thực vật</a></li>

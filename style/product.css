@@ -50,19 +50,15 @@
     border: none;
     border-radius: 5px;
 }
-.product-info p{
-    
-    border: 1px solid black;
-}
-
 .product-info p.name{
     height: 50px;
     text-align: center;
 }
 
 .product-info p.price{
-    height: 50px;
+    height: 30px;
     color: red;
+    padding-left: 10px;
 }
 
 .product-info input{

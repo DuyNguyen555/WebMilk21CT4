@@ -67,7 +67,7 @@ header {
 .submenu {
     position: absolute;
     width: 380px;
-    height: 260px;
+    height: 180px;
     border: 1px solid #ccc;
     padding: 10px 0 10px 20px;
     visibility: hidden;
