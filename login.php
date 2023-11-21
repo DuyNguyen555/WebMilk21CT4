@@ -17,10 +17,13 @@
 			$address = $_POST["address"];
 			$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
 
-			require_once("./sql/connect.php");
-			$checkId = "SELECT id FROM khachhang 
-						WHERE $email = email";
-			$row = mysqli_fetch_assoc($result);
+			$checkIdQuery = "SELECT id FROM khachhang WHERE email = ?";
+    		$checkIdStatement = mysqli_prepare($connect, $checkIdQuery);
+			mysqli_stmt_bind_param($checkIdStatement, "s", $email);
+			mysqli_stmt_execute($checkIdStatement);
+			mysqli_stmt_store_result($checkIdStatement);
+
+			$row = mysqli_stmt_num_rows($checkIdStatement);
 			if($row > 0){
 				echo 'trung';
 				mysqli_close($connect);
