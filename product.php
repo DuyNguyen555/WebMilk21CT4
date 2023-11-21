@@ -53,8 +53,8 @@
                     </div>
                     <div class="pro-top-items">
                         <select name="" id="">
-                            <option value="">Giá từ thấp đến cao</option>
-                            <option value="">Giá từ cao đến thấp</option>
+                            <option value="1">Giá từ thấp đến cao</option>
+                            <option value="2">Giá từ cao đến thấp</option>
                         </select>
                     </div>
                 </div>
