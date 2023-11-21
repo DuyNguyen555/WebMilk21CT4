@@ -42,8 +42,33 @@
                 <h1>Thông tin khuyến mãi</h1>
                 <p>Khách hàng có đơn hàng hơn 1 triệu đồng sẽ miễn phí phí vận chuyển</p>
             </div>
+            <section class="footer">
+                <section class="app-container">
+                    <p>Tải ứng dụng DTCMilk</p>
+                    <div class="app-google">
+                        <img src="images/dow.webp">
+                    </div>
+                </section>
+                <div class="footer-top">
+                    <li><a href="contact.php">Liên hệ</a></li>
+                    <li><a href="">Tuyển dụng</a></li>
+                    <li><a href="about.php">Giới thiệu</a></li>
+                    <li>
+                        <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                        <a href="https://twitter.com/" class="fab fa-twitter"></a>
+                        <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+                    </li>
+                </div>
+                <div class="footer-center">
+                    <p>Công ty Cổ phần Họa Mi với số đăng ký kinh doanh: 0123456789 <br>
+                        Địa chỉ đăng ký: Tổ dân phố 80, P.Hòa Minh, Q.Liên Chiểu, TP.Đà Nẵng, Việt Nam - 0908 080 808<br>
+                        Đặt hàng online: <b>0952 648 931.</b>
+                    </p>
+                </div>
+            </section>
         </div>
     </div>
+    
 </body>
 
 </html>
