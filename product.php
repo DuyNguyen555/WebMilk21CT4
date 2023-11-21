@@ -11,13 +11,17 @@
 </head>
 
 <body>
-    <?php 
-        require_once("sql/connect.php");
-        $sql =  "SELECT * FROM sua INNER JOIN hang 
-        ON sua.maHang = hang.maHang
-        order by giaTien asc";
-        $result = mysqli_query($connect, $sql);
-    ?>
+<?php
+    require_once("sql/connect.php");
+
+    $sort_order = isset($_GET['sort_order']) && $_GET['sort_order'] === 'desc' ? 'desc' : 'asc';
+
+    $sql = "SELECT * FROM sua 
+            INNER JOIN hang ON sua.maHang = hang.maHang
+            ORDER BY giaTien $sort_order";
+    
+    $result = mysqli_query($connect, $sql);
+?>
     <header>
         <div class="logo">
             <img src="images/logo1.jpg" alt="logo milk">
@@ -28,8 +32,6 @@
             <li><a href="product.php">Sản phẩm</a>
                 <ul class="submenu">
                     <li><a href="">sữa tươi và sữa dinh dưỡng</a></li>
-                    <li><a href="">sữa cho mẹ bầu và bé</a></li>
-                    <li><a href="">sữa cho người cao tuổi</a></li>
                     <li><a href="">sữa chua</a></li>
                     <li><a href="">sữa đặc</a></li>
                     <li><a href="">sữa thực vật</a></li>
@@ -52,10 +54,13 @@
                         <p>Sản phẩm</p>
                     </div>
                     <div class="pro-top-items">
-                        <select name="" id="">
-                            <option value="1">Giá từ thấp đến cao</option>
-                            <option value="2">Giá từ cao đến thấp</option>
-                        </select>
+                        <form method="GET" action="product.php">
+                            <p>Sản phẩm</p>
+                            <select name="sort_order" onchange="this.form.submit()">
+                                <option value="asc">Giá từ thấp đến cao</option>
+                                <option value="desc">Giá từ cao đến thấp</option>
+                            </select>
+                        </form>
                     </div>
                 </div>
                 <?php 
