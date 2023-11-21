@@ -52,7 +52,7 @@
                 </div>
                 <div class="infoWeb">
                     <h2>Website DTCMilkVN</h2>
-                    <p>www.dtcmilkvn.com</p>
+                    <a href="./index.php">www.dtcmilkvn.com</a>
                 </div>
             </div>
         </div>

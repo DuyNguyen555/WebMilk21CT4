@@ -38,6 +38,10 @@
     background-color: rgb(135, 206, 208);
 }
 
-.infoWeb p {
+.infoWeb a {
     font-size: 20px;
+}
+
+.infoWeb a:hover {
+    text-decoration: underline;
 }

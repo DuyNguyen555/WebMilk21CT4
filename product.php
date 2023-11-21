@@ -63,22 +63,24 @@
                         </form>
                     </div>
                 </div>
+                <div class="frame-product-info">
                 <?php 
                     while($row = mysqli_fetch_assoc($result)){
                 ?>
-                <div class="product-info">
-                    <form>
-                        <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
-                            <p class="name"><?php echo $row["tenSua"]; ?></p>
-                            <p class="price"><?php $formattedPrice = number_format($row["giaTien"], 0, ".", ",");
-                                    echo $formattedPrice . " VND" ; ?></p>
-                        <input type="submit" value="Thêm vào giỏ hàng">
-                    </form>
-                </div>
+                    <div class="product-info">
+                        <form>
+                            <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
+                                <p class="name"><?php echo $row["tenSua"]; ?></p>
+                                <p class="price"><?php $formattedPrice = number_format($row["giaTien"], 0, ".", ",");
+                                        echo $formattedPrice . " VND" ; ?></p>
+                            <input type="submit" value="Thêm vào giỏ hàng">
+                        </form>
+                    </div>
                 <?php
                     }
                     mysqli_close($connect);
                 ?>
+                </div>
             </div>
         </div>
     </section>
