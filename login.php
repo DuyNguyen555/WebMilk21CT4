@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Login Page in HTML with CSS Code Example</title>
 
-<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./style/login.css">
 
 </head>
 <body>
