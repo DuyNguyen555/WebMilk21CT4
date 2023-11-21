@@ -17,30 +17,25 @@
 			$address = $_POST["address"];
 			$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
 
-			$checkIdQuery = "SELECT id FROM khachhang WHERE email = $email";
-    		$checkIdStatement = mysqli_prepare($connect, $checkIdQuery);
-			mysqli_stmt_bind_param($checkIdStatement, "s", $email);
-			mysqli_stmt_execute($checkIdStatement);
-			mysqli_stmt_store_result($checkIdStatement);
+			require_once("./sql/connect.php");
+			
+			$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
+					VALUES ('$name', $cell, '$address', '$email', '$pass')";
 
-			$row = mysqli_stmt_num_rows($checkIdStatement);
-			if($row > 0){
-				echo 'trung';
-				mysqli_close($connect);
-			}
-			else{
-				$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
-						VALUES ('$name', $cell, '$address', '$email', '$pass')";
-
-				$result = mysqli_query($connect, $sql);
-				if($result){
-					mysqli_close($connect);
-					header("location:login.php");
-				}
-				else{
-					echo "Update thất bại " . mysqli_error($conn);
-				}
-			}
+			$result = mysqli_query($connect, $sql);
+            if($result){
+                mysqli_close($connect);
+				echo "Swal.fire({
+					icon: 'success',
+					title: 'Đăng ký thành công',
+					showConfirmButton: false,
+					timer: 1500
+				  });";
+                header("location:login.php");
+            }
+            else{
+                echo "Update thất bại " . mysqli_error($conn);
+            }
 		}
 	?>
 	<div class="box-form">
@@ -109,6 +104,76 @@
 				});
 			}
 		}
+
+		// function validateSignUp(event){
+		// 	event.preventDefault();
+		// 	var pass = document.getElementById("txtPassSignUp").value
+		// 	var repass = document.getElementById("txtPassSignUp2").value
+		// 	if(document.getElementById("txtNameSignUP").value === ""){
+		// 		Swal.fire({
+		// 			icon: "warning",
+		// 			title: "Thông tin đăng ký trống",
+		// 			text: "Quý khách vui lòng nhập họ và tên để đăng ký",
+		// 		});
+		// 	}
+		// 	else if(document.getElementById("txtEmailSignUP").value === ""){
+		// 		Swal.fire({
+		// 			icon: "warning",
+		// 			title: "Thông tin đăng ký trống",
+		// 			text: "Quý khách vui lòng nhập email để đăng ký",
+		// 		});
+		// 	}
+		// 	else if(document.getElementById("txtCellSignUP").value === ""){
+		// 		Swal.fire({
+		// 			icon: "warning",
+		// 			title: "Thông tin đăng ký trống",
+		// 			text: "Quý khách vui lòng nhập số điện thoại để đăng ký",
+		// 		});
+		// 	}
+		// 	else if(document.getElementById("txtAddressSignUP").value === ""){
+		// 		Swal.fire({
+		// 			icon: "warning",
+		// 			title: "Thông tin đăng ký trống",
+		// 			text: "Quý khách vui lòng nhập số điện thoại để đăng ký",
+		// 		});
+		// 	}
+		// 	else if(pass === ""){
+		// 		Swal.fire({
+		// 			icon: "warning",
+		// 			title: "Thông tin đăng ký trống",
+		// 			text: "Quý khách vui lòng nhập mật khẩu để đăng ký",
+		// 		});
+		// 	}
+		// 	else if(repass === ""){
+		// 		Swal.fire({
+		// 			icon: "warning",
+		// 			title: "Thông tin đăng ký trống",
+		// 			text: "Quý khách vui lòng nhập lại mật khẩu để đăng ký",
+		// 		});
+		// 	}
+		// 	else if(pass !== repass){
+		// 		Swal.fire({
+		// 			icon: "error",
+		// 			title: "Thông tin đăng ký sai",
+		// 			text: "Mật khẩu không khớp",
+		// 		});
+		// 	}
+		// 	else {
+		// 		let timerInterval;
+		// 		Swal.fire({
+		// 			title: "Hệ thống đang xử lý",
+		// 			html: "Quý khách đợi trong giây lát",
+		// 			timer: 2000,
+		// 			timerProgressBar: true,
+		// 			didOpen: () => {
+		// 				Swal.showLoading()
+		// 			},
+		// 		willClose: () => {
+		// 			clearInterval(timerInterval);
+		// 		}
+		// 		})
+		// 	}
+		// }
 	</script>
 </body>
 
