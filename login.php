@@ -11,11 +11,11 @@
 <body>
 	<?php 
 		if(isset($_POST["btnSub"])){
-			$name = $_POST("name");
-			$email = $_POST("email");
-			$cell = $_POST("cell");
-			$address = $_POST("address");
-			$pass = $_POST("pass");
+			$name = $_POST["name"];
+			$email = $_POST["email"];
+			$cell = $_POST["cell"];
+			$address = $_POST["address"];
+			$pass = $_POST["pass"];
 
 			require_once("./sql/connect.php");
 			$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
