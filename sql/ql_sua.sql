@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 18, 2023 lúc 05:06 PM
+-- Thời gian đã tạo: Th10 20, 2023 lúc 03:31 PM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -109,7 +109,7 @@ CREATE TABLE `sua` (
 --
 
 INSERT INTO `sua` (`maSua`, `tenSua`, `loaiSua`, `giaTien`, `maHang`) VALUES
-('dl1', 'Sữa tươi Dutch Lady hộp', 'sữa tươi', 2800, 'DL'),
+('dl1', 'Sữa tươi Dutch Lady hộp', 'sữa tươi', 28000, 'DL'),
 ('dl3', 'Sữa đặc Dutch Lady Cao Cấp', 'sữa đặc', 20000, 'DL'),
 ('th1', 'Sữa tươi TH true MILK hộp', 'sữa tươi', 32000, 'TH'),
 ('th2', 'Sữa chua TH true MILK', 'sữa chua', 32000, 'TH'),

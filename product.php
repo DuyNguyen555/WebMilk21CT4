@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/product.css">
+    <link rel="stylesheet" href="style/main2.css">
+    <link rel="stylesheet" href="style/product3.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 
@@ -45,37 +44,30 @@
             <li><a href="cart.php" class="fas fa-shopping-cart"></a></li>
         </div>
     </header>
-    <section class="cartegory">
+    <section class="product">
         <div class="container">
             <div class="row">
-                <div class="cart-center row">
-                    <div class="cart-top-items">
+                <div class="pro-center row">
+                    <div class="pro-top-items">
                         <p>Sản phẩm</p>
                     </div>
-                    <div class="cart-top-items">
+                    <div class="pro-top-items">
                         <select name="" id="">
-                            <option value="">Sắp xếp</option>
                             <option value="">Giá từ thấp đến cao</option>
                             <option value="">Giá từ cao đến thấp</option>
                         </select>
-                    </div>
-                    <div class="cart-content row">
-                        <div class="cart-content-items">
-                        </div>
                     </div>
                 </div>
                 <?php 
                     while($row = mysqli_fetch_assoc($result)){
                 ?>
                 <div class="product-info">
-                    <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
-                    <p><?php echo $row["tenSua"]; ?></p>
-                    <p><?php echo $row["tenHang"];?></p>
-                    <p><?php echo $row["loaiSua"];?></p>
-                    <p><?php echo $row["giaTien"];?></p>
-                    <div class="bttn">
-                        <button type="button" class="" onclick=""><a href="cart.php">Thêm sản phẩm vào giỏ hàng</a></button>
-                    </div>
+                    <form>
+                        <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
+                            <p><?php echo $row["tenSua"]; ?></p>
+                            <p><?php echo $row["giaTien"];?></p>
+                        <input type="submit" value="Thêm vào giỏ hàng">
+                    </form>
                 </div>
                 <?php
                     }
