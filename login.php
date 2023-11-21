@@ -17,7 +17,7 @@
 			$address = $_POST["address"];
 			$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
 
-			$checkIdQuery = "SELECT id FROM khachhang WHERE email = ?";
+			$checkIdQuery = "SELECT id FROM khachhang WHERE email = $email";
     		$checkIdStatement = mysqli_prepare($connect, $checkIdQuery);
 			mysqli_stmt_bind_param($checkIdStatement, "s", $email);
 			mysqli_stmt_execute($checkIdStatement);
