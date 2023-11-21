@@ -29,6 +29,7 @@
 			<h5>Đăng ký</h5>
 			<p>Đã có tài khoản: <a href="#" onclick="changeSignIn()">Đăng nhập</a></p>
 			<form action="">
+				<input type="text" name="" id="" placeholder="Họ và tên">
 				<input type="text" placeholder="Email"><br>
 				<input type="text" name="" id="" placeholder="Số điện thoại">
 				<input type="text" name="" id="" placeholder="Địa chỉ">
