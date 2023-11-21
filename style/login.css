@@ -46,8 +46,14 @@ body {
 .box-form .right h5 {
   font-size: 3vmax;
 }
+
+.box-form .right .sign-in h5{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .box-form .right p {
-  font-size: 15px;
+  font-size: 18px;
   color: #B0B3B9;
 }
 
