@@ -64,8 +64,9 @@
                 <div class="product-info">
                     <form>
                         <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
-                            <p><?php echo $row["tenSua"]; ?></p>
-                            <p><?php echo $row["giaTien"];?></p>
+                            <p class="name"><?php echo $row["tenSua"]; ?></p>
+                            <p class="price"><?php $formattedPrice = number_format($row["giaTien"], 0, ".", ",");
+                                    echo $formattedPrice . " VND" ; ?></p>
                         <input type="submit" value="Thêm vào giỏ hàng">
                     </form>
                 </div>

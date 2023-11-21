@@ -39,18 +39,32 @@
     border: 1px solid grey;
     margin-bottom: 5px;
     margin-left: 10px;
+    background-color: rgb(173, 217, 234);
+    border-radius: 10px;
 }
 .product-info img{
-    height: 170px;
-    width: 195px;
-    text-align: center;
+    margin-top: 10px;
+    margin-left: 25px;
+    height: 150px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
 }
 .product-info p{
-    text-align: center; 
+    
+    border: 1px solid black;
 }
-.product-info p:nth-child(1){
+
+.product-info p.name{
     height: 50px;
+    text-align: center;
 }
+
+.product-info p.price{
+    height: 50px;
+    color: red;
+}
+
 .product-info input{
     margin-left: 40px;
     margin-bottom: 20px;
