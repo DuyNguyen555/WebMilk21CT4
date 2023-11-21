@@ -14,11 +14,11 @@
 <?php
     require_once("sql/connect.php");
 
-    $sort_order = isset($_GET['sort_order']) && $_GET['sort_order'] === 'desc' ? 'desc' : 'asc';
-
+    $sort_order = isset($_GET['sort_order']) && ($_GET['sort_order'] === 'desc' || $_GET['sort_order'] === 'asc') ? $_GET['sort_order'] : 'asc';
     $sql = "SELECT * FROM sua 
-            INNER JOIN hang ON sua.maHang = hang.maHang
-            ORDER BY giaTien $sort_order";
+        INNER JOIN hang ON sua.maHang = hang.maHang
+        WHERE sua.loaiSua = 'sữa thực vật'
+        ORDER BY giaTien $sort_order";
     
     $result = mysqli_query($connect, $sql);
 ?>
@@ -30,7 +30,7 @@
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="about.php">Giới thiệu</a></li>
             <li><a href="product.php">Sản phẩm</a>
-                <ul class="submenu">
+            <ul class="submenu">
                     <li><a href="suatuoi.php">Sữa tươi và sữa dinh dưỡng</a></li>
                     <li><a href="suachua.php">Sữa chua</a></li>
                     <li><a href="suadac.php">Sữa đặc</a></li>
@@ -51,10 +51,10 @@
             <div class="row">
                 <div class="pro-center row">
                     <div class="pro-top-items">
-                        <p>Sản phẩm</p>
+                        <p>Sữa thực vật</p>
                     </div>
                     <div class="pro-top-items">
-                        <form id="sortForm" method="GET" action="product.php">
+                        <form id="sortForm" method="GET" action="suatv.php">
                             <p>Sắp xếp</p>
                             <select name="sort_order" onchange="document.getElementById('sortForm').submit()">
                                 <option value="asc" <?php echo isset($_GET['sort_order']) && $_GET['sort_order'] === 'asc' ? 'selected' : ''; ?>>Giá từ thấp đến cao</option>

@@ -17,11 +17,11 @@
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="about.php">Giới thiệu</a></li>
             <li><a href="product.php">Sản phẩm</a>
-                <ul class="submenu">
-                    <li><a href="">sữa tươi và sữa dinh dưỡng</a></li>
-                    <li><a href="">sữa chua</a></li>
-                    <li><a href="">sữa đặc</a></li>
-                    <li><a href="">sữa thực vật</a></li>
+            <ul class="submenu">
+                    <li><a href="suatuoi.php">Sữa tươi và sữa dinh dưỡng</a></li>
+                    <li><a href="suachua.php">Sữa chua</a></li>
+                    <li><a href="suadac.php">Sữa đặc</a></li>
+                    <li><a href="suatv.php">Sữa thực vật</a></li>
                 </ul>
             </li>
             <li><a href="promotion.php">Khuyến mãi</a></li>

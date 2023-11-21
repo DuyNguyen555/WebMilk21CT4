@@ -19,7 +19,8 @@
 			$email = mysqli_real_escape_string($connect, $_POST["email"]);
 			$cell = mysqli_real_escape_string($connect, $_POST["cell"]);
 			$address = mysqli_real_escape_string($connect, $_POST["address"]);
-			$pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
+			// $pass = password_hash($_POST["pass"], PASSWORD_DEFAULT);
+			$pass = $_POST["pass"];
 
 			// Kiểm tra xem tên đã tồn tại hay chưa
 			$checkNameQuery = "SELECT * FROM khachhang WHERE tenKH = '$name'";
