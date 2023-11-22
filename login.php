@@ -67,16 +67,6 @@
 			if(password_verify($pass, $row["password"])) {
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $pass;
-	?>
-				<script type='text/javascript'>
-				Swal.fire({
-					icon: 'success',
-					title: 'Đăng nhập thành công',
-					showConfirmButton: false,
-					timer: 1500
-				});
-			</script>
-	<?php
 				header("location:index.php");
 			}
 			} else {
