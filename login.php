@@ -21,7 +21,7 @@
 		require_once("./sql/connect.php");
 
 		$sql = "INSERT INTO khachhang(tenKH, sdt, diaChi, email, password)
-				VALUES ('$name', $cell, '$address', '$email', '$pass')";
+				VALUES ('$name', '$cell', '$address', '$email', '$pass')";
 
 		$result = mysqli_query($connect, $sql);
 
