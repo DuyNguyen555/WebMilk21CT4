@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,31 +28,22 @@
 		$result = mysqli_query($connect, $sql);
 
 		if ($result) {
-			mysqli_close($connect);
-	?>
-			<script type="text/javascript">
-				Swal.fire({
-					icon: 'success',
-					title: 'Đăng ký thành công',
+			?>
+				<script>
+					Swal.fire({
+					icon: "success",
+					title: "Đăng ký thành công",
 					showConfirmButton: false,
-					timer: 1500
+					timer: 1000
 				});
-			</script>
-		<?php
+				</script>
+			<?php
+			mysqli_close($connect);
 		} else {
 			echo mysqli_error($connect);
-		?>
-			<script type="text/javascript">
-				Swal.fire({
-					icon: 'error',
-					title: 'Đăng ký thất bại',
-					showConfirmButton: false,
-					timer: 1500
-				});
-			</script>
-	<?php
 		}
 	}
+
 
 	if (isset($_POST["btnSubIn"])) { // Đăng nhập
 		$email = $_POST["email"];
@@ -58,7 +51,7 @@
 
 		require_once("./sql/connect.php");
 
-		$sql = "SELECT count(*) as count, password
+		$sql = "SELECT count(*) as count, id, tenKh, password
 				FROM khachhang WHERE email = '$email'";
 		
 		$result = mysqli_query($connect, $sql);
@@ -71,24 +64,8 @@
 			}
 			} else {
 				echo mysqli_error($connect);
-				echo "<script type='text/javascript'>
-				Swal.fire({
-					icon: 'error',
-					title: 'Không tìm thấy tài khoản',
-					showConfirmButton: false,
-					timer: 1500
-				});
-			</script>";
+				echo "Không tìm thấy tài khoản";
 			}
-		} else {
-			echo "<script type='text/javascript'>
-				Swal.fire({
-					icon: 'error',
-					title: 'Đăng ký thất bại',
-					showConfirmButton: false,
-					timer: 1500
-				});
-			</script>";
 		}
 	?>
 

@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/main4.css">
     <link rel="stylesheet" href="style/support.css">
     <link rel="stylesheet" href="style/contact2.css">
     <title>DTCMilk Việt Nam</title>
@@ -32,8 +33,18 @@
         </div>
         <div class="option">
             <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
-            <li><a href="login.php" class="fas fa-user"></a></li>
+            <li>
+                <div>
+                <?php
+                    echo $_SESSION["email"];
+                ?>
+                </div>
+                <a href="login.php" class="fas fa-user"></a>
+            </li>
             <li><a href="cart.php" class="fas fa-shopping-cart"></a></li>
+            <li>
+                <a href='logout.php'>Đăng xuất</a>
+            </li>
         </div>
     </header>
     <div class="box-content">
