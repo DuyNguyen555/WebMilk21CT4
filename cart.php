@@ -7,7 +7,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/cart3.css">
+    <link rel="stylesheet" href="style/cart.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
@@ -17,9 +17,12 @@
     $result = mysqli_query($connect, $sql);
 
     if(isset($_POST["btnDel"])){
-
-        $query = "DELETE FROM giohang
-                    WHERE";
+        $maSp = $_POST["maSp"];
+        $query = "DELETE FROM giohang WHERE maSp = '$maSp'";
+        $target = mysqli_query($connect, $query);
+        if($target){
+            header("location:cart.php");
+        }
     }
 ?>
 
@@ -74,7 +77,7 @@
                         <th>Mã sản phẩm</th>
                         <th>Tên sản phẩm</th>
                         <th>Số lượng</th>
-                        <th>Thành tiền</th>
+                        <th>Giá tiền</th>
                         <th>Chọn</th>
                     </tr>
                     
@@ -82,7 +85,7 @@
                     <tr>
                         <form action="" method="post">
                             <td><img src="./images/product/<?php echo $row['maSp']; ?>.webp" alt="Hình sữa"></td>
-                            <td><input type="text" name="" id="" value="<?php echo $row['maSp']; ?>"></td>
+                            <td><input type="text" name="maSp" id="" value="<?php echo $row['maSp']; ?>" readonly></td>
                             <td><p><?php echo $row['tenSp']; ?></p></td>
                             <td><input type="number" value="<?php echo $row['soLuong'] ?>" min="1"></td>
                             <td><p><?php echo $row['giaTien'] ?></p></td>

@@ -71,9 +71,9 @@ body {
     border-bottom: 1px solid grey;
 }
 
-.infor-cart table tr td:nth-child(1){
-    border: 1px solid black;
-    width: 60px;
+.infor-cart table img{
+    width: 70px;
+    height: 70px;
 }
 
 .infor-cart table tr td p{
@@ -85,6 +85,19 @@ body {
     width: 30px;
     height: 30px;
     font-size: 30px;
+}
+
+.infor-cart table tr td input[type="text"]{
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+}
+
+.infor-cart table tr td input[type="text"]:focus {
+    outline: none;
 }
 
 .pay-cart{
