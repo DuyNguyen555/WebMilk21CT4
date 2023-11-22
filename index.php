@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,6 +12,13 @@
 </head>
 
 <body>
+    <?php 
+    if(!isset($_SESSION["email"])){
+        header("location:login.php");
+    }
+    echo "Xin chao" . $_SESSION["email"];
+    echo "<a href='logout.php'>Dang xuat</a>";
+    ?>
     <header>
         <div class="logo">
             <img src="images/logo1.jpg" alt="logo milk">

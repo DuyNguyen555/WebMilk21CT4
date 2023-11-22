@@ -38,7 +38,7 @@
 			</script>
 		<?php
 		} else {
-			mysqli_error($connect);
+			echo mysqli_error($connect);
 		?>
 			<script type="text/javascript">
 				Swal.fire({
@@ -67,12 +67,24 @@
 			if(password_verify($pass, $row["password"])) {
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $pass;
+	?>
+				<script type='text/javascript'>
+				Swal.fire({
+					icon: 'success',
+					title: 'Đăng nhập thành công',
+					showConfirmButton: false,
+					timer: 1500
+				});
+			</script>
+	<?php
 				header("location:index.php");
+			}
 			} else {
+				echo mysqli_error($connect);
 				echo "<script type='text/javascript'>
 				Swal.fire({
 					icon: 'error',
-					title: 'Đăng ký thất bại',
+					title: 'Không tìm thấy tài khoản',
 					showConfirmButton: false,
 					timer: 1500
 				});
@@ -82,13 +94,12 @@
 			echo "<script type='text/javascript'>
 				Swal.fire({
 					icon: 'error',
-					title: 'Không tìm thấy tài khoản',
+					title: 'Đăng ký thất bại',
 					showConfirmButton: false,
 					timer: 1500
 				});
 			</script>";
 		}
-	}
 	?>
 
 	<div class="box-form">
