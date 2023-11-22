@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="thempro.css">
+    <link rel="stylesheet" href="./style/add.css">
     <title>Thêm sản phẩm</title>
 </head>
 <body>
 <?php
     if(isset($_POST["btnThem"]))
     {
-        require_once("../sql/connect.php");
+        require_once("../../sql/connect.php");
         $ma = $_POST["txtMa"];
         $ten = $_POST["txtTen"];
         $loai = $_POST["sltLoai"];
@@ -22,7 +22,7 @@
         if($result)
         {
             mysqli_close($connect);
-            header("location:dspro.php");
+            header("location:product/list.php");
         }
         else
         {

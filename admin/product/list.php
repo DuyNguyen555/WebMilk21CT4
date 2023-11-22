@@ -10,7 +10,7 @@
         <h1>DANH SÁCH SẢN PHẨM</h1>
     </header>
 <?php
-    require_once("../sql/connect.php");
+    require_once("../../sql/connect.php");
     $sql = "select * from sua";
     $result = mysqli_query($connect, $sql);
 ?>
@@ -22,7 +22,7 @@
                 <th>Loại sản phẩm</th>
                 <th>Giá</th>
                 <th>Mã hãng</th>
-                <th colspan="2"><a href="thempro.php">Thêm</a></th>
+                <th colspan="2"><a href="add.php">Thêm</a></th>
             </tr>
         <?php
             while($row = mysqli_fetch_assoc($result))
@@ -35,7 +35,7 @@
                 <td><?php echo $row["giaTien"]; ?></td>
                 <td><?php echo $row["maHang"]; ?></td>
                 <td><a href="capnhat.php?key=<?php echo $row['maSua']; ?>">Sửa</a></td>
-                <td><a href="xoa.php?key=<?php echo $row['maSua']; ?>"
+                <td><a href="delete.php?key=<?php echo $row['maSua']; ?>"
                     onclick="return confirm('Bạn có đồng ý xóa không?')">Xóa</a></td>
             </tr>
         <?php
