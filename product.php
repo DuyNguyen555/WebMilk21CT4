@@ -124,7 +124,6 @@
                                 <div class="price-id">
                                     <p class="price"><?php $formattedPrice = number_format($row["giaTien"], 0, ".", ",");
                                                         echo $formattedPrice . " VND"; ?></p>
-                                    <!-- <p class="id-product"><?php echo $row["maSua"] ?></p> -->
                                     <input type="text" name="productId" class="" value="<?php echo $row['maSua'] ?>" readonly>
                                 </div>
                                 <input type="submit" name="btnAdd" value="Thêm vào giỏ hàng">
