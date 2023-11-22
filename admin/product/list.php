@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/list.css">
+    <script src="./style/list.js" defer></script>
     <title>Danh sách sản phẩm</title>
 </head>
 <body>
@@ -15,7 +17,7 @@
     $result = mysqli_query($connect, $sql);
 ?>
     <div class = "container">
-        <table border="1" style="border-collapse: collapse;">
+        <table id="myTable" border="1" style="border-collapse: collapse;">
             <tr>
                 <th>Mã</th>
                 <th>Tên sản phẩm</th>
@@ -27,7 +29,7 @@
         <?php
             while($row = mysqli_fetch_assoc($result))
             {
-        ?>
+        ?>  
             <tr>
                 <td><?php echo $row["maSua"]; ?></td>
                 <td><?php echo $row["tenSua"]; ?></td>
@@ -43,6 +45,12 @@
             mysqli_close($connect);
         ?>
         </table>
+
+        <div id="pagination">
+            <button onclick="changePage(-1)">Previous</button>
+            <span id="currentPage">1</span>
+            <button onclick="changePage(1)">Next</button>
+        </div>
     </div>
 </body>
 </html>

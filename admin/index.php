@@ -16,7 +16,7 @@
                 <a href="./product/list.php">Quản lý sản phẩm</a>
             </div>
             <div class="option">
-                <a href="#">Quản lý khách hàng</a>
+                <a href="./customer/list.php">Quản lý khách hàng</a>
             </div>
             <div class="option">
                 <a href="#">Quản lý đơn hàng</a>
