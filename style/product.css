@@ -56,13 +56,8 @@ body {
 .product-info {
     height: 300px;
     width: 200px;
-<<<<<<< HEAD
-    border: 1px solid grey;
-    margin-bottom: 10px;
-=======
     border: none;
     margin-bottom: 5px;
->>>>>>> 67c732c770b7fb65c9e1874c1ea2271724f1846f
     margin-left: 10px;
     /* background-color: rgb(173, 217, 234); */
     background: linear-gradient(120deg, white 5%, rgb(0, 115, 255)) ;
