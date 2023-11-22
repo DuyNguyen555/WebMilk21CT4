@@ -11,6 +11,13 @@
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
+<?php 
+    require_once("sql/connect.php");
+    $sql = "SELECT * FROM giohang";
+    $result = mysqli_query($connect, $sql);
+?>
+
+
     <!-- Thanh menu -->
     <header>
         <div class="logo">
@@ -61,19 +68,28 @@
                         <th>Tên sản phẩm</th>
                         <th>Số lượng</th>
                         <th>Thành tiền</th>
-                        <th>Xóa</th>
+                        <th>Chọn</th>
                     </tr>
-                    <!-- <tr>
-                        <td><img src="images/product/vnm1.webp" alt="Hình sữa"></td>
-                        <td><p>Sữa tươi Vinamilk hộp</p></td>
-                        <td><input type="number" value="1" min="1"></td>
-                        <td><p>28000Đ</p></td>
-                        <td><button>X</button></td>
-                    </tr> -->
                     
+                    <?php while($row = mysqli_fetch_assoc($result)){ ?>
+                    <tr>
+                        <td><img src="./images/product/<?php echo $row['maSp']; ?>.webp" alt="Hình sữa"></td>
+                        <td><p><?php echo $row['tenSp']; ?></p></td>
+                        <td><input type="number" value="<?php echo $row['soLuong'] ?>" min="1"></td>
+                        <td><p><?php echo $row['giaTien'] ?></p></td>
+                        <td><input type="checkbox" name="" id="" checked>
+                        <input type="submit" name="btnDel" value="X">
+                        </td>
+                    </tr>
+                    <?php 
+                    }
+                    mysqli_close($connect);
+                    ?>
                     
                 </table>
             </section>
+
+            <!-- Thông tin số tiền cần thanh toán -->
             <section class="pay-cart">
                 <table>
                     <tr>
@@ -101,5 +117,31 @@
             </section>
         </div>
     </div>
+
+    <section class="footer">
+        <section class="app-container">
+            <p>Tải ứng dụng DTCMilk</p>
+            <div class="app-google">
+                <img src="images/dow.webp">
+            </div>
+        </section>
+        <div class="footer-top">
+            <li><a href="contact.php">Liên hệ</a></li>
+            <li><a href="">Tuyển dụng</a></li>
+            <li><a href="about.php">Giới thiệu</a></li>
+            <li>
+                <a href="https://www.facebook.com/" class="fab fa-facebook-f"></a>
+                <a href="https://twitter.com/" class="fab fa-twitter"></a>
+                <a href="https://www.youtube.com/" class="fab fa-youtube"></a>
+            </li>
+        </div>
+        <div class="footer-center">
+            <p>Công ty Cổ phần Họa Mi với số đăng ký kinh doanh: 0123456789 <br>
+                Địa chỉ đăng ký: Tổ dân phố 80, P.Hòa Minh, Q.Liên Chiểu, TP.Đà Nẵng, Việt Nam - 0908 080 808<br>
+                Đặt hàng online: <b>0952 648 931.</b>
+            </p>
+        </div>
+    </section>
+
 </body>
 </html>

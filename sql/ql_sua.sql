@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 22, 2023 lúc 10:16 AM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.0.28
+-- Host: 127.0.0.1
+-- Generation Time: Nov 22, 2023 at 05:55 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `ql_sua`
+-- Database: `ql_sua`
 --
 CREATE DATABASE IF NOT EXISTS `ql_sua` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `ql_sua`;
@@ -26,7 +26,7 @@ USE `ql_sua`;
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`taiKhoanAdmin`, `matKhauAdmin`) VALUES
@@ -44,20 +44,29 @@ INSERT INTO `admin` (`taiKhoanAdmin`, `matKhauAdmin`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `giohang`
+-- Table structure for table `giohang`
 --
 
 CREATE TABLE `giohang` (
-  `maSp` char(15) NOT NULL,
-  `tenSp` varchar(255) NOT NULL,
+  `maSp` char(10) NOT NULL,
+  `tenSp` varchar(100) NOT NULL,
   `soLuong` int(11) NOT NULL,
   `giaTien` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `giohang`
+--
+
+INSERT INTO `giohang` (`maSp`, `tenSp`, `soLuong`, `giaTien`) VALUES
+('dl31', 'Sữa đặc Dutch Lady có đường', 1, 20000),
+('vnm2', 'Sữa chua Vinamilk nha đam', 1, 28000),
+('vnm43', 'Sữa đậu nành Vinamilk', 1, 25000);
+
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hang`
+-- Table structure for table `hang`
 --
 
 CREATE TABLE `hang` (
@@ -69,7 +78,7 @@ CREATE TABLE `hang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hang`
+-- Dumping data for table `hang`
 --
 
 INSERT INTO `hang` (`maHang`, `tenHang`, `diaChi`, `dienThoai`, `email`) VALUES
@@ -83,7 +92,7 @@ INSERT INTO `hang` (`maHang`, `tenHang`, `diaChi`, `dienThoai`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `khachhang`
+-- Table structure for table `khachhang`
 --
 
 CREATE TABLE `khachhang` (
@@ -96,17 +105,18 @@ CREATE TABLE `khachhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `khachhang`
+-- Dumping data for table `khachhang`
 --
 
 INSERT INTO `khachhang` (`id`, `tenKh`, `sdt`, `diaChi`, `email`, `password`) VALUES
 (5, 'Thanh Nguyễn', '0742365984', 'H6782', 'thanhdepgai@gmail.com', '$2y$10$ajnPBiV5KYglxSdaf3MIIOGxLUVGnfFc2eoE3ImTGub7FhoUUPAXu'),
-(9, 'Duy Nguyễn', '0779743659', 'k196', 'drduyvn555@gmail.com', '$2y$10$Kdtu964GrcssPNEvTUPHB.18YURi7AV1EXphw4tukybQb2mKcDIXu');
+(9, 'Duy Nguyễn', '0779743659', 'k196', 'drduyvn555@gmail.com', '$2y$10$Kdtu964GrcssPNEvTUPHB.18YURi7AV1EXphw4tukybQb2mKcDIXu'),
+(10, 'Nguyễn Văn Hảo Hán', '0779743659', 'H452', 'haohan555@gmail.com', '$2y$10$CXaVqeLZVrAv1cbSSJNyQ.hQBb9nuhhT.qTzqGLtruB3706upyDTm');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sua`
+-- Table structure for table `sua`
 --
 
 CREATE TABLE `sua` (
@@ -118,7 +128,7 @@ CREATE TABLE `sua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sua`
+-- Dumping data for table `sua`
 --
 
 INSERT INTO `sua` (`maSua`, `tenSua`, `loaiSua`, `giaTien`, `maHang`) VALUES
@@ -156,44 +166,50 @@ INSERT INTO `sua` (`maSua`, `tenSua`, `loaiSua`, `giaTien`, `maHang`) VALUES
 ('vs13', 'Sữa Fami vị cà phê', 'sữa thực vật', 36000, 'VS');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `hang`
+-- Indexes for table `giohang`
+--
+ALTER TABLE `giohang`
+  ADD PRIMARY KEY (`maSp`);
+
+--
+-- Indexes for table `hang`
 --
 ALTER TABLE `hang`
   ADD PRIMARY KEY (`maHang`);
 
 --
--- Chỉ mục cho bảng `khachhang`
+-- Indexes for table `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `sua`
+-- Indexes for table `sua`
 --
 ALTER TABLE `sua`
   ADD PRIMARY KEY (`maSua`),
   ADD KEY `maHang` (`maHang`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `khachhang`
+-- AUTO_INCREMENT for table `khachhang`
 --
 ALTER TABLE `khachhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `sua`
+-- Constraints for table `sua`
 --
 ALTER TABLE `sua`
   ADD CONSTRAINT `sua_ibfk_1` FOREIGN KEY (`maHang`) REFERENCES `hang` (`maHang`);
