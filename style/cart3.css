@@ -65,24 +65,19 @@ body {
 .infor-cart table input{
     width: 30px;
 }
-.infor-cart table span{
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #333;
-    cursor: pointer;
-}
+
 .infor-cart table td{
     padding: 20px 0;
     border-bottom: 1px solid grey;
 }
 
-.infor-cart table td:nth-child(1){
-    width: 100px;
+.infor-cart table tr td:nth-child(1){
+    border: 1px solid black;
+    width: 60px;
 }
 
 .infor-cart table tr td p{
-    font-size: 18;
+    font-size: 18px;
 }
 
 .infor-cart table tr td input[type="checkbox"],
@@ -97,30 +92,7 @@ body {
     padding-left: 12px;
     border-left: 2px solid grey;
 }
-.pay-cart table{
-    padding-top: 10px;
-    padding-right: 5px;
-    width: 100%;
-}
-.pay-cart table th{
-    padding-bottom: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px; 
-    color: #333; 
-    border-bottom: 2px solid grey;
-}
-.pay-cart table td{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px; 
-    color: #333; 
-    padding: 6px 0;
-}
-.pay-cart table tr:nth-child(4) td{
-    border-bottom: 2px solid grey;
-}
-.pay-cart table tr td:last-child{
-    text-align: right;
-}
+
 .pay-cart-button{
     padding-top: 10px;
     text-align: center;

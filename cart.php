@@ -7,7 +7,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="style/cart3.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
@@ -15,6 +15,12 @@
     require_once("sql/connect.php");
     $sql = "SELECT * FROM giohang";
     $result = mysqli_query($connect, $sql);
+
+    if(isset($_POST["btnDel"])){
+
+        $query = "DELETE FROM giohang
+                    WHERE";
+    }
 ?>
 
 
@@ -65,6 +71,7 @@
                 <table>
                     <tr>    
                         <th>Sản phẩm</th>
+                        <th>Mã sản phẩm</th>
                         <th>Tên sản phẩm</th>
                         <th>Số lượng</th>
                         <th>Thành tiền</th>
@@ -73,13 +80,16 @@
                     
                     <?php while($row = mysqli_fetch_assoc($result)){ ?>
                     <tr>
-                        <td><img src="./images/product/<?php echo $row['maSp']; ?>.webp" alt="Hình sữa"></td>
-                        <td><p><?php echo $row['tenSp']; ?></p></td>
-                        <td><input type="number" value="<?php echo $row['soLuong'] ?>" min="1"></td>
-                        <td><p><?php echo $row['giaTien'] ?></p></td>
-                        <td><input type="checkbox" name="" id="" checked>
-                        <input type="submit" name="btnDel" value="X">
-                        </td>
+                        <form action="" method="post">
+                            <td><img src="./images/product/<?php echo $row['maSp']; ?>.webp" alt="Hình sữa"></td>
+                            <td><input type="text" name="" id="" value="<?php echo $row['maSp']; ?>"></td>
+                            <td><p><?php echo $row['tenSp']; ?></p></td>
+                            <td><input type="number" value="<?php echo $row['soLuong'] ?>" min="1"></td>
+                            <td><p><?php echo $row['giaTien'] ?></p></td>
+                            <td><input type="checkbox" name="" id="" checked>
+                            <input type="submit" name="btnDel" value="X">
+                            </td>
+                        </form>
                     </tr>
                     <?php 
                     }
@@ -89,32 +99,14 @@
                 </table>
             </section>
 
-            <!-- Thông tin số tiền cần thanh toán -->
             <section class="pay-cart">
-                <table>
-                    <tr>
-                        <th colspan="2">Tổng tiền giỏ hàng</th>
-                    </tr>
-                    <tr>
-                        <td>Tổng sản phẩm</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>Tổng tiền hàng</td>
-                        <td><p>56000Đ</p></td>
-                    </tr>
-                    <tr>
-                        <td>Tổng thanh toán</td>
-                        <td><p style="color: black; font-weight: bold;">56000Đ</p></td>
-                    </tr>
-                </table>
                 <div>
                     <div class="pay-cart-button">
-                        <button>Tiếp tục mua</button>
                         <button>Thanh toán</button>
                     </div>
                 </div>
             </section>
+
         </div>
     </div>
 
