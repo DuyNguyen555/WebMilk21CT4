@@ -10,10 +10,10 @@
     <header>
         <h1>QUẢN LÝ WEBSITE</h1>
     </header>
-    <div class="admin-content">
+    <div class="admin-content">s
         <div class="content">
             <div class="option1">
-                <a href="qlpro.php">Quản lý sản phẩm</a>
+                <a href="dspro.php">Quản lý sản phẩm</a>
             </div>
             <div class="option2">
                 <a href="#">Quản lý khách hàng</a>
