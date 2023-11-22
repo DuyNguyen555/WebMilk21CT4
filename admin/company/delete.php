@@ -1,7 +1,7 @@
 <?php
-    $id = $_GET["key"];
+    $ma = $_GET["key"];
     require_once("../../sql/connect.php");
-    $sql = "delete from khachhang where id = $id";
+    $sql = "delete from hang where maHang = '$ma'";
     $result = mysqli_query($connect, $sql);
     if($result)
     {

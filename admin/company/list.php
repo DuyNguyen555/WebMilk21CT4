@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/list.css">
-    <title>Danh sách khách hàng</title>
+    <title>Danh sách hãng sữa</title>
 </head>
 <body>
 <header>
-        <h1>DANH SÁCH KHÁCH HÀNG</h1>
+        <h1>DANH SÁCH HÃNG SỮA</h1>
     </header>
 <?php
     require_once("../../sql/connect.php");
-    $sql = "select * from khachhang";
+    $sql = "select * from hang";
     $result = mysqli_query($connect, $sql);
 ?>
     <div class = "container">
         <table border="1" style="border-collapse: collapse;">
             <tr>
-                <th>Tên khách hàng</th>
+                <th>Mã hãng</th>
+                <th>Tên hãng</th>
                 <th>Số điện thoại</th>
                 <th>Địa chỉ</th>
                 <th>Email</th>
@@ -29,8 +30,9 @@
             {
         ?>  
             <tr>
-                <td><?php echo $row["tenKh"]; ?></td>
-                <td><?php echo $row["sdt"]; ?></td>
+                <td><?php echo $row["maHang"]; ?></td>
+                <td><?php echo $row["tenHang"]; ?></td>
+                <td><?php echo $row["dienThoai"]; ?></td>
                 <td><?php echo $row["diaChi"]; ?></td>
                 <td><?php echo $row["email"]; ?></td>
                 <td><a href="update.php?key=<?php echo $row['id']; ?>">Sửa</a></td>
