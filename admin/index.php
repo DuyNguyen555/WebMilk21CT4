@@ -19,7 +19,7 @@
                 <a href="./customer/list.php">Quản lý khách hàng</a>
             </div>
             <div class="option">
-                <a href="#">Quản lý đơn hàng</a>
+                <a href="./company/list.php">Quản lý hãng sữa</a>
             </div>
         </div>
     </div>
