@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main4.css">
     <link rel="stylesheet" href="style/support.css">
-    <link rel="stylesheet" href="style/contact2.css">
+    <link rel="stylesheet" href="style/contact.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 
