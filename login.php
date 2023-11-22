@@ -5,9 +5,10 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Login Page in HTML with CSS Code Example</title>
+	<link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="./style/login2.css">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<title>Login</title>
 </head>
 
 <body>
