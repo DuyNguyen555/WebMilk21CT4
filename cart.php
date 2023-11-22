@@ -70,23 +70,7 @@
                         <td><p>28000Đ</p></td>
                         <td><button>X</button></td>
                     </tr> -->
-                    <?php
-                        // Kiểm tra xem session có danh sách sản phẩm không
-                        if (isset($_SESSION["selectedProductCodes"]) && !empty($_SESSION["selectedProductCodes"])) {
-                            // Chuyển đổi chuỗi JSON thành mảng PHP
-                            $selectedProductCodes = json_decode($_SESSION["selectedProductCodes"]);
-
-                            // Lặp qua danh sách sản phẩm
-                            foreach ($selectedProductCodes as $productCode) {
-                                // Lấy thông tin sản phẩm từ cơ sở dữ liệu hoặc bất kỳ nguồn dữ liệu nào khác
-                                // và hiển thị thông tin sản phẩm trong bảng
-                                echo "<tr>";
-                                echo "<td><img src='images/product/{$productCode}.webp' alt='Hình sữa'></td>";
-                                // Thêm thông tin sản phẩm khác tại đây
-                                echo "</tr>";
-                            }
-                        }
-                    ?>
+                    
                     
                 </table>
             </section>
