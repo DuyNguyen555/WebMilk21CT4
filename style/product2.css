@@ -72,16 +72,30 @@ body {
     border: none;
     border-radius: 5px;
 }
+
+.product-info .price-id {
+    display: flex;
+}
+
 .product-info p.name{
     height: 50px;
     text-align: center;
+    padding-top: 5px;
 }
 
 .product-info p.price{
     font-weight: bold;
     height: 30px;
+    width: 50%;
     color: red;
     padding-left: 10px;
+}
+
+.product-info p.id-product{
+    height: 30px;
+    width: 50%;
+    color: rgba(67, 67, 67, 0.84);
+    padding-left: 30px;
 }
 
 .product-info input{

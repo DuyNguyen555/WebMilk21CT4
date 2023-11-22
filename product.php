@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main4.css">
-    <link rel="stylesheet" href="style/product.css">
+    <link rel="stylesheet" href="style/product2.css">
     <title>DTCMilk Việt Nam</title>
 </head>
 
@@ -82,8 +82,11 @@
                         <form>
                             <img src="images/product/<?php echo $row["maSua"]; ?>.webp" alt="Ảnh minh hoạ">
                                 <p class="name"><?php echo $row["tenSua"]; ?></p>
-                                <p class="price"><?php $formattedPrice = number_format($row["giaTien"], 0, ".", ",");
-                                        echo $formattedPrice . " VND" ; ?></p>
+                                <div class="price-id">
+                                    <p class="price"><?php $formattedPrice = number_format($row["giaTien"], 0, ".", ",");
+                                            echo $formattedPrice . " VND" ; ?></p>
+                                    <p class="id-product"><?php echo $row["maSua"] ?></p>
+                                </div>
                             <input type="submit" value="Thêm vào giỏ hàng">
                         </form>
                     </div>

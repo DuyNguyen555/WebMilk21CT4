@@ -10,6 +10,7 @@
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
+    <!-- Thanh menu -->
     <header>
         <div class="logo">
             <img src="images/logo1.jpg" alt="logo milk">
@@ -44,12 +45,15 @@
             </li>
         </div>
     </header>
+
+    <!-- Nội dung -->
     <div class="box row">
         <section class="header-cart">
             <h1>Giỏ hàng của bạn</h1>
         </section>
         <div class="content">
             <section class="infor-cart">
+                <!-- Sản phẩm khi khách hàng chọn -->
                 <table>
                     <tr>    
                         <th>Sản phẩm</th>
@@ -58,20 +62,31 @@
                         <th>Thành tiền</th>
                         <th>Xóa</th>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td><img src="images/product/vnm1.webp" alt="Hình sữa"></td>
                         <td><p>Sữa tươi Vinamilk hộp</p></td>
                         <td><input type="number" value="1" min="1"></td>
                         <td><p>28000Đ</p></td>
                         <td><button>X</button></td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/product/vnm2.webp" alt="Hình sữa"></td>
-                        <td><p>Sữa tươi Vinamilk hộp</p></td>
-                        <td><input type="number" value="1" min="1"></td>
-                        <td><p>28000Đ</p></td>
-                        <td><button>X</button></td>
-                    </tr>
+                    </tr> -->
+                    <?php
+                        // Kiểm tra xem session có danh sách sản phẩm không
+                        if (isset($_SESSION["selectedProductCodes"]) && !empty($_SESSION["selectedProductCodes"])) {
+                            // Chuyển đổi chuỗi JSON thành mảng PHP
+                            $selectedProductCodes = json_decode($_SESSION["selectedProductCodes"]);
+
+                            // Lặp qua danh sách sản phẩm
+                            foreach ($selectedProductCodes as $productCode) {
+                                // Lấy thông tin sản phẩm từ cơ sở dữ liệu hoặc bất kỳ nguồn dữ liệu nào khác
+                                // và hiển thị thông tin sản phẩm trong bảng
+                                echo "<tr>";
+                                echo "<td><img src='images/product/{$productCode}.webp' alt='Hình sữa'></td>";
+                                // Thêm thông tin sản phẩm khác tại đây
+                                echo "</tr>";
+                            }
+                        }
+                    ?>
+                    
                 </table>
             </section>
             <section class="pay-cart">
