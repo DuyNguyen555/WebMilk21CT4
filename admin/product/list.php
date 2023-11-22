@@ -34,7 +34,7 @@
                 <td><?php echo $row["loaiSua"]; ?></td>
                 <td><?php echo $row["giaTien"]; ?></td>
                 <td><?php echo $row["maHang"]; ?></td>
-                <td><a href="capnhat.php?key=<?php echo $row['maSua']; ?>">Sửa</a></td>
+                <td><a href="update.php?key=<?php echo $row['maSua']; ?>">Sửa</a></td>
                 <td><a href="delete.php?key=<?php echo $row['maSua']; ?>"
                     onclick="return confirm('Bạn có đồng ý xóa không?')">Xóa</a></td>
             </tr>

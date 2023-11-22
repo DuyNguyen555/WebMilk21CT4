@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 22, 2023 at 07:02 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th10 22, 2023 lúc 10:16 AM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ql_sua`
+-- Cơ sở dữ liệu: `ql_sua`
 --
 CREATE DATABASE IF NOT EXISTS `ql_sua` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `ql_sua`;
@@ -26,7 +26,7 @@ USE `ql_sua`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Cấu trúc bảng cho bảng `admin`
 --
 
 CREATE TABLE `admin` (
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `admin`
+-- Đang đổ dữ liệu cho bảng `admin`
 --
 
 INSERT INTO `admin` (`taiKhoanAdmin`, `matKhauAdmin`) VALUES
@@ -44,7 +44,20 @@ INSERT INTO `admin` (`taiKhoanAdmin`, `matKhauAdmin`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hang`
+-- Cấu trúc bảng cho bảng `giohang`
+--
+
+CREATE TABLE `giohang` (
+  `maSp` char(15) NOT NULL,
+  `tenSp` varchar(255) NOT NULL,
+  `soLuong` int(11) NOT NULL,
+  `giaTien` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `hang`
 --
 
 CREATE TABLE `hang` (
@@ -56,7 +69,7 @@ CREATE TABLE `hang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `hang`
+-- Đang đổ dữ liệu cho bảng `hang`
 --
 
 INSERT INTO `hang` (`maHang`, `tenHang`, `diaChi`, `dienThoai`, `email`) VALUES
@@ -70,7 +83,7 @@ INSERT INTO `hang` (`maHang`, `tenHang`, `diaChi`, `dienThoai`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `khachhang`
+-- Cấu trúc bảng cho bảng `khachhang`
 --
 
 CREATE TABLE `khachhang` (
@@ -83,7 +96,7 @@ CREATE TABLE `khachhang` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `khachhang`
+-- Đang đổ dữ liệu cho bảng `khachhang`
 --
 
 INSERT INTO `khachhang` (`id`, `tenKh`, `sdt`, `diaChi`, `email`, `password`) VALUES
@@ -93,7 +106,7 @@ INSERT INTO `khachhang` (`id`, `tenKh`, `sdt`, `diaChi`, `email`, `password`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sua`
+-- Cấu trúc bảng cho bảng `sua`
 --
 
 CREATE TABLE `sua` (
@@ -105,7 +118,7 @@ CREATE TABLE `sua` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `sua`
+-- Đang đổ dữ liệu cho bảng `sua`
 --
 
 INSERT INTO `sua` (`maSua`, `tenSua`, `loaiSua`, `giaTien`, `maHang`) VALUES
@@ -140,47 +153,47 @@ INSERT INTO `sua` (`maSua`, `tenSua`, `loaiSua`, `giaTien`, `maHang`) VALUES
 ('vnm43', 'Sữa đậu nành Vinamilk', 'sữa thực vật', 25000, 'VNM'),
 ('vs11', 'Sữa Fami vị dừa', 'sữa thực vật', 36000, 'VS'),
 ('vs12', 'Sữa Fami ít đường', 'sữa thực vật', 36000, 'VS'),
-('vs13', 'Sữa Fami vị cà ', 'sữa thực vật', 36000, 'VS');
+('vs13', 'Sữa Fami vị cà phê', 'sữa thực vật', 36000, 'VS');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `hang`
+-- Chỉ mục cho bảng `hang`
 --
 ALTER TABLE `hang`
   ADD PRIMARY KEY (`maHang`);
 
 --
--- Indexes for table `khachhang`
+-- Chỉ mục cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `sua`
+-- Chỉ mục cho bảng `sua`
 --
 ALTER TABLE `sua`
   ADD PRIMARY KEY (`maSua`),
   ADD KEY `maHang` (`maHang`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `khachhang`
+-- AUTO_INCREMENT cho bảng `khachhang`
 --
 ALTER TABLE `khachhang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- Constraints for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- Constraints for table `sua`
+-- Các ràng buộc cho bảng `sua`
 --
 ALTER TABLE `sua`
   ADD CONSTRAINT `sua_ibfk_1` FOREIGN KEY (`maHang`) REFERENCES `hang` (`maHang`);

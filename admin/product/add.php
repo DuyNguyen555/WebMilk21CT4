@@ -17,12 +17,12 @@
         $gia = $_POST["txtGia"];
         $maH = $_POST["sltMaH"];
         $sql = "insert into sua(maSua, tenSua, loaiSua, giaTien, maHang)
-                            values('$ma', '$ten', '$loai', $gia, '$maH)";
+                            values('$ma', '$ten', '$loai', $gia, '$maH')";
         $result = mysqli_query($connect, $sql);
         if($result)
         {
             mysqli_close($connect);
-            header("location:product/list.php");
+            header("location:list.php");
         }
         else
         {
@@ -48,10 +48,10 @@
                         <tr>
                             <td>Loại sản phẩm</td>
                             <td><select name="sltLoai">
-                                    <option value="tuoi">Sữa tươi</option>
-                                    <option value="chua">Sữa chua</option>
-                                    <option value="dac">Sữa đặc</option>
-                                    <option value="tv">Sữa thực vật</option>
+                                    <option value="sữa tươi">Sữa tươi</option>
+                                    <option value="sữa chua">Sữa chua</option>
+                                    <option value="sữa đặc">Sữa đặc</option>
+                                    <option value="sữa thực vật">Sữa thực vật</option>
                                 </select>
                             </td>
                         </tr>
@@ -62,12 +62,12 @@
                         <tr>
                             <td>Mã hãng</td>
                             <td><select name="sltMaH">
-                                    <option value="">AB</option>
-                                    <option value="chua">DL</option>
-                                    <option value="dac">NTF</option>
-                                    <option value="tv">TH</option>
-                                    <option value="dac">VNM</option>
-                                    <option value="tv">VS</option>                            
+                                    <option value="AB">AB</option>
+                                    <option value="DL">DL</option>
+                                    <option value="NTF">NTF</option>
+                                    <option value="TH">TH</option>
+                                    <option value="VNM">VNM</option>
+                                    <option value="VS">VS</option>                            
                                 </select>
                             </td>
                         </tr>
