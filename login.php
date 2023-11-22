@@ -6,7 +6,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Login Page in HTML with CSS Code Example</title>
-	<link rel="stylesheet" href="./style/login.css">
+	<link rel="stylesheet" href="./style/login2.css">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
