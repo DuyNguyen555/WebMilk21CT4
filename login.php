@@ -69,10 +69,9 @@
 				<form action="" method="post" onsubmit="return validateSignIn()">
 					<h5>Đăng nhập</h5>
 					<p>Chưa có tài khoản: <a href="#" onclick="changeSignUp()">Tạo tài khoản</a></p>
-					<input type="text" id="txtEmailSignIn" placeholder="Email"><br>
-					<input type="password" id="txtPassSignIn" placeholder="Mật khẩu">
-					<br>
-					<input type="submit" value="Đăng nhập" id="txtSubmitSignIn">
+					<input type="text"     id="txtEmailSignIn" placeholder="Email"><br>
+					<input type="password" id="txtPassSignIn"  placeholder="Mật khẩu"><br>
+					<input type="submit"   id="txtSubmitSignIn" value="Đăng nhập" >
 				</form>
 			</section>
 
@@ -81,12 +80,12 @@
 				<form action="" method="post" onsubmit="return validateSignUp()">
 					<h5>Đăng ký</h5>
 					<p>Đã có tài khoản: <a href="#" onclick="changeSignIn()">Đăng nhập</a></p>
-					<input type="text" name="name" id="txtNameSignUP" placeholder="Họ và tên">
-					<input type="text" name="email" id="txtEmailSignUP" placeholder="Email"><br>
-					<input type="text" name="cell" id="txtCellSignUP" placeholder="Số điện thoại">
-					<input type="text" name="address" id="txtAddressSignUP" placeholder="Địa chỉ">
-					<input type="password" name="pass" id="txtPassSignUp" placeholder="Mật khẩu">
-					<input type="password" id="txtPassSignUp2" placeholder="Nhập lại mật khẩu">
+					<input type="text"     name="name"    id="txtNameSignUP"    placeholder="Họ và tên">
+					<input type="text"     name="email"   id="txtEmailSignUP"   placeholder="Email"><br>
+					<input type="text"     name="cell"    id="txtCellSignUP"    placeholder="Số điện thoại">
+					<input type="text"     name="address" id="txtAddressSignUP" placeholder="Địa chỉ">
+					<input type="password" name="pass"    id="txtPassSignUp"    placeholder="Mật khẩu">
+					<input type="password"                id="txtPassSignUp2"   placeholder="Nhập lại mật khẩu">
 					<br>
 					<input type="submit" name="btnSub" value="Đăng ký">
 				</form>
