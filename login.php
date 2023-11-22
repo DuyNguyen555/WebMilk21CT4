@@ -58,13 +58,31 @@
 		$row = mysqli_fetch_assoc($result);
 		if($row["count"] > 0) {
 			if(password_verify($pass, $row["password"])) {
+				echo '<script>
+                    Swal.fire({
+                        icon: "success",
+                        title: "Đăng nhập thành công",
+						showConfirmButton: false,
+						timer: 1000
+                    }).then(function() {
+                        window.location.href = "index.php";
+                    });
+                 </script>';
 				$_SESSION["email"] = $email;
 				$_SESSION["password"] = $pass;
-				header("location:index.php");
-			}
 			} else {
-				echo mysqli_error($connect);
-				echo "Không tìm thấy tài khoản";
+				echo '<script>
+				Swal.fire({
+				icon: "error",
+				title: "Sai mật khẩu",
+			});</script>';
+			}
+		} else {
+			echo '<script>
+				Swal.fire({
+				icon: "error",
+				title: "Tài khoản không tồn tại",
+			});</script>';
 			}
 		}
 	?>
