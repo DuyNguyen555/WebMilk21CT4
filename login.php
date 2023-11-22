@@ -104,6 +104,7 @@
 			document.querySelector(".sign-up").style.display = "none";
 		}
 
+		// Hàm kiểm tra thanh đăng nhập
 		function validateSignIn(){
 			if(document.getElementById("txtEmailSignIn").value === ""){
 				Swal.fire({
