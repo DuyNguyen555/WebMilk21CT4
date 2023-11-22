@@ -35,8 +35,8 @@
                 <td><?php echo $row["dienThoai"]; ?></td>
                 <td><?php echo $row["diaChi"]; ?></td>
                 <td><?php echo $row["email"]; ?></td>
-                <td><a href="update.php?key=<?php echo $row['id']; ?>">Sửa</a></td>
-                <td><a href="delete.php?key=<?php echo $row['id']; ?>"
+                <td><a href="update.php?key=<?php echo $row['maHang']; ?>">Sửa</a></td>
+                <td><a href="delete.php?key=<?php echo $row['maHang']; ?>"
                     onclick="return confirm('Bạn có đồng ý xóa không?')">Xóa</a></td>
             </tr>
         <?php

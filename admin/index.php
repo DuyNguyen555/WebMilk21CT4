@@ -21,7 +21,7 @@
             <div class="option">
                 <a href="./company/list.php">Quản lý hãng sữa</a>
             </div>
-        </div>
+        </div>  
     </div>
 </body>
 </html>
