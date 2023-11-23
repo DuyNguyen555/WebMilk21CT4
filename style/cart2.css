@@ -100,10 +100,21 @@ body {
     outline: none;
 }
 
+.infor-cart table tr:last-child td{
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(4, 181, 225);
+
+}
+
 .pay-cart{
     flex: 1;
     padding-left: 12px;
     border-left: 2px solid grey;
+}
+
+.pay-cart .info-cus p{
+    margin: 5px;
 }
 
 .pay-cart-button{

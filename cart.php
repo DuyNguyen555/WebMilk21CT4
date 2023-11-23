@@ -7,7 +7,7 @@
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
-    <link rel="stylesheet" href="style/cart.css">
+    <link rel="stylesheet" href="style/cart2.css">
     
     <title>DTCMilk Việt Nam</title>
 </head>
@@ -29,8 +29,12 @@
             header("location:cart.php");
         }
     }
-?>
 
+    $email = $_SESSION["email"];
+    $inforCus = "SELECT * FROM khachhang WHERE email = '$email'";
+    $result2 = mysqli_query($connect, $inforCus);
+    $row2 = mysqli_fetch_assoc($result2);
+?>
 
     <!-- Thanh menu -->
     <header>
@@ -114,12 +118,22 @@
                     }
                     mysqli_close($connect);
                     ?>
-                    
+                    <tr>
+                        <td colspan="4">Tổng tiền thanh toán</td>
+                        <td colspan="2" id="totalPrice">236,000Đ</td>
+                    </tr>
                 </table>
             </section>
 
             <section class="pay-cart">
                 <div>
+                    <div class="info-cus">
+                        <h3>Thông tin khách hàng:</h3>
+                        <p>Họ và tên: <?php echo $row2['tenKh']; ?></p>
+                        <p>Mã khách hàng: <?php echo $row2['id']; ?></p>
+                        <p>Số điện thoại: <?php echo $row2['sdt']; ?></p>
+                        <p>Địa chỉ nhà: <?php echo $row2['diaChi']; ?></p>
+                    </div>
                     <div class="pay-cart-button">
                         <button onclick="payProduct()">Thanh toán</button>
                     </div>
@@ -153,7 +167,5 @@
             </p>
         </div>
     </section>
-    
-    <script src="./js/pay.js"></script>
 </body>
 </html>
