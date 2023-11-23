@@ -14,11 +14,6 @@
 </head>
 
 <body>
-    <!-- <?php
-            // if(!isset($_SESSION["email"])){
-            //     header("location:login.php");
-            // }
-            ?> -->
     <header>
         <div class="logo">
             <img src="images/logo1.jpg" alt="logo milk">
