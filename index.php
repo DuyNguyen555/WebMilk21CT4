@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>DTCMilk Việt Nam</title>
 </head>
 
 <body>
-    <?php 
-    if(!isset($_SESSION["email"])){
-        header("location:login.php");
-    }
-    ?>
+    <!-- <?php
+            // if(!isset($_SESSION["email"])){
+            //     header("location:login.php");
+            // }
+            ?> -->
     <header>
         <div class="logo">
             <img src="images/logo1.jpg" alt="logo milk">
@@ -26,7 +27,7 @@
             <li><a href="index.php">Trang chủ</a></li>
             <li><a href="about.php">Giới thiệu</a></li>
             <li><a href="product.php">Sản phẩm</a>
-            <ul class="submenu">
+                <ul class="submenu">
                     <li><a href="suatuoi.php">Sữa tươi và sữa dinh dưỡng</a></li>
                     <li><a href="suachua.php">Sữa chua</a></li>
                     <li><a href="suadac.php">Sữa đặc</a></li>
@@ -40,15 +41,25 @@
             <li><input placeholder="Tìm kiếm" type="text"><i class="fas fa-search"></i></li>
             <li>
                 <div>
-                <?php
-                    echo $_SESSION["email"];
-                ?>
+                    <?php
+                    if (isset($_SESSION["email"])) {
+                        echo $_SESSION["email"];
+                    } else {
+                        echo "Tài khoản";
+                    }
+                    ?>
                 </div>
                 <a href="login.php" class="fas fa-user"></a>
             </li>
             <li><a href="cart.php" class="fas fa-shopping-cart"></a></li>
             <li>
-                <a href='logout.php'>Đăng xuất</a>
+                <?php
+                if (isset($_SESSION["email"])) {
+                    echo "<a href='logout.php'>Đăng xuất</a>";
+                } else {
+                    echo "";
+                }
+                ?>
             </li>
         </div>
     </header>
@@ -120,4 +131,5 @@
         setInterval(imgSlide, 5000)
     </script>
 </body>
+
 </html>

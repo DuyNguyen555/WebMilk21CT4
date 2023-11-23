@@ -37,14 +37,24 @@
             <li>
                 <div>
                 <?php
-                    echo $_SESSION["email"];
+                    if(isset($_SESSION["email"])){
+                        echo $_SESSION["email"];
+                    } else {
+                        echo "Tài khoản";
+                    }
                 ?>
                 </div>
                 <a href="login.php" class="fas fa-user"></a>
             </li>
             <li><a href="cart.php" class="fas fa-shopping-cart"></a></li>
             <li>
-                <a href='logout.php'>Đăng xuất</a>
+            <?php
+                if (isset($_SESSION["email"])) {
+                    echo "<a href='logout.php'>Đăng xuất</a>";
+                } else {
+                    echo "";
+                }
+            ?>
             </li>
         </div>
     </header>

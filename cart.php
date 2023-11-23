@@ -11,7 +11,11 @@
     <title>DTCMilk Việt Nam</title>
 </head>
 <body>
-<?php 
+<?php
+    if(!isset($_SESSION["email"])){
+        header("location:login.php");
+    }
+
     require_once("sql/connect.php");
     $sql = "SELECT * FROM giohang";
     $result = mysqli_query($connect, $sql);
