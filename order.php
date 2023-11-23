@@ -86,44 +86,9 @@
                         <th>Chọn</th>
                     </tr>
                     
-                    <?php while($row = mysqli_fetch_assoc($result)){ ?>
-                    <tr>
-                        <form action="" method="post">
-                            <!-- Ảnh sữa -->
-                            <td><img src="./images/product/<?php echo $row['maSp']; ?>.webp" alt="Hình sữa"></td>
-
-                            <!-- Mã sữa -->
-                            <td><input type="text" name="maSp" id="" value="<?php echo $row['maSp']; ?>" readonly></td>
-
-                            <!-- Tên sữa -->
-                            <td><p><?php echo $row['tenSp']; ?></p></td>
-
-                            <!-- Số lượng mua -->
-                            <td><input type="number" value="<?php echo $row['soLuong'] ?>" min="1"></td>
-
-                            <!-- Giá tiền -->
-                            <td><p><?php echo $row['giaTien'] ?></p></td>
-
-                            <!-- Các nút chức năng -->
-                            <td><input type="checkbox" name="" id="txtCheck" checked>
-                            <input type="submit" name="btnDel" value="X">
-                            </td>
-                        </form>
-                    </tr>
-                    <?php 
-                    }
-                    mysqli_close($connect);
-                    ?>
+                    
                     
                 </table>
-            </section>
-
-            <section class="pay-cart">
-                <div>
-                    <div class="pay-cart-button">
-                        <button onclick="payProduct()">Thanh toán</button>
-                    </div>
-                </div>
             </section>
 
         </div>
