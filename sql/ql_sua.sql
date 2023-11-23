@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2023 at 05:55 PM
+-- Generation Time: Nov 23, 2023 at 04:12 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -59,9 +59,10 @@ CREATE TABLE `giohang` (
 --
 
 INSERT INTO `giohang` (`maSp`, `tenSp`, `soLuong`, `giaTien`) VALUES
-('dl31', 'Sữa đặc Dutch Lady có đường', 1, 20000),
-('vnm2', 'Sữa chua Vinamilk nha đam', 1, 28000),
-('vnm43', 'Sữa đậu nành Vinamilk', 1, 25000);
+('vnm1', 'Sữa tươi Vinamilk hộp không đường', 1, 28000),
+('vnm15', 'Sữa tươi Vinamilk hộp có đường', 1, 28000),
+('vnm31', 'Sữa đặc Ông Thọ', 1, 24000),
+('vnm33', 'Sữa đặc Ngôi sao Phương Nam lon', 1, 22000);
 
 -- --------------------------------------------------------
 
@@ -109,7 +110,7 @@ CREATE TABLE `khachhang` (
 --
 
 INSERT INTO `khachhang` (`id`, `tenKh`, `sdt`, `diaChi`, `email`, `password`) VALUES
-(5, 'Thanh Nguyễn', '0742365984', 'H6782', 'thanhdepgai@gmail.com', '$2y$10$ajnPBiV5KYglxSdaf3MIIOGxLUVGnfFc2eoE3ImTGub7FhoUUPAXu'),
+(5, 'Thanh Nguyễn', '742365984', 'H6782 Đà Nẵng', 'thanhdepgai@gmail.com', '$2y$10$ajnPBiV5KYglxSdaf3MIIOGxLUVGnfFc2eoE3ImTGub7FhoUUPAXu'),
 (9, 'Duy Nguyễn', '0779743659', 'k196', 'drduyvn555@gmail.com', '$2y$10$Kdtu964GrcssPNEvTUPHB.18YURi7AV1EXphw4tukybQb2mKcDIXu'),
 (10, 'Nguyễn Văn Hảo Hán', '0779743659', 'H452', 'haohan555@gmail.com', '$2y$10$CXaVqeLZVrAv1cbSSJNyQ.hQBb9nuhhT.qTzqGLtruB3706upyDTm');
 
