@@ -1,0 +1,3 @@
+function payProduct(){
+    var table = 
+}

@@ -110,7 +110,7 @@
             <section class="pay-cart">
                 <div>
                     <div class="pay-cart-button">
-                        <button>Thanh toán</button>
+                        <button onclick="payProduct()">Thanh toán</button>
                     </div>
                 </div>
             </section>
@@ -142,6 +142,7 @@
             </p>
         </div>
     </section>
-
+    
+    <script src="./js/pay.js"></script>
 </body>
 </html>
